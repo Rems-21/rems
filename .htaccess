@@ -1,0 +1,15 @@
+﻿# ============================================================
+# SECURITE SERVEUR APACHE — PORTFOLIO DR REMUS
+# ============================================================
+
+# 1. Bloquer strictement l'accès direct aux fichiers sensibles (.env, .git, etc.)
+<FilesMatch "^\.(env|git|htaccess|ini|log)">
+    Require all denied
+</FilesMatch>
+
+# 2. En-têtes de sécurité
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>

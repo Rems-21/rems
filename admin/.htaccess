@@ -1,0 +1,13 @@
+# ============================================================
+# SÉCURITÉ DOSSIER ADMIN — DR REMUS
+# ============================================================
+
+# Bloquer l'accès direct aux fichiers internes du dossier includes
+<FilesMatch "^(auth|db|config|layout_top|layout_bottom)\.php$">
+    Require all denied
+</FilesMatch>
+
+# Bloquer l'accès aux logs ou fichiers de sauvegarde
+<FilesMatch "\.(log|sql|ini|env|bak)$">
+    Require all denied
+</FilesMatch>

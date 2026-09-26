@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formations &amp; Accompagnement par Dr Remus. Des parcours pratiques par cohortes pour apprendre une technologie, construire un projet concret et progresser avec un suivi humain.">
+  <title>Formations &amp; Accompagnement · Dr Remus</title>
+  <link rel="icon" href="logo.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/formation.css?v=5.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/formation.js?v=5.0" defer></script>
+</head>
+<body class="page-formation">
+
+  <!-- ═══ AMBIENCE LUMINEUSE (STRICT MONOCHROME NOIR & BLANC) ════ -->
+  <div class="f-ambient" aria-hidden="true">
+    <div class="f-orb f-orb-1"></div>
+    <div class="f-orb f-orb-2"></div>
+    <div class="f-orb f-orb-3"></div>
+  </div>
+  <div class="ambient-grid" aria-hidden="true"></div>
+
+  <!-- ═══ NAVIGATION HAUTE DÉDIÉE ═════════════════════════════════ -->
+  <header class="site-nav">
+    <nav class="nav-inner" aria-label="Navigation principale formations">
+      <a href="index.html" class="nav-logo" title="Retour au portfolio">
+        <div class="logo-mark">
+          <img src="logo.jpg" alt="Logo Dr Remus" width="42" height="42">
+        </div>
+        <span>Dr Remus<em>.</em></span>
+      </a>
+
+      <ul class="nav-links" id="fNavLinks">
+        <li><a href="index.html" class="nav-link">← Portfolio</a></li>
+        <li><a href="#prochaine-cohorte" class="nav-link active">Prochaine cohorte</a></li>
+        <li><a href="#reservation" class="nav-link" onclick="window.openResaModal &amp;&amp; window.openResaModal(); return false;">Réservation</a></li>
+        <li><a href="#parcours" class="nav-link">Le parcours</a></li>
+        <li><a href="#formules" class="nav-link">Formules</a></li>
+        <li><a href="#autres-formations" class="nav-link">Sessions à venir</a></li>
+        <li><a href="#cohortes-passees" class="nav-link">Historique</a></li>
+      </ul>
+
+      <div class="nav-cta-wrap">
+        <button type="button" class="btn btn-primary js-trigger-resa-modal" id="btnNavResaModal" onclick="window.openResaModal &amp;&amp; window.openResaModal()" style="padding:10px 22px; font-size:0.86rem;">
+          Réserver
+        </button>
+        <button class="burger" id="fBurger" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══ CONTENU PRINCIPAL ═══════════════════════════════════════ -->
+  <main>
+
+    <!-- ── 1. SECTION HERO ───────────────────────────────────────── -->
+    <section class="f-hero-section">
+      <div class="container">
+        <div class="f-hero-wrapper">
+          
+          <div class="f-label-pill">
+            <span class="f-laser-dot"></span>
+            FORMATIONS &amp; ACCOMPAGNEMENT
+          </div>
+
+          <h1 class="f-hero-title">
+            Apprendre. Construire.<br>
+            <span class="f-monochrome-glow-text">Être accompagné.</span>
+          </h1>
+
+          <p class="f-hero-sub">
+            Des parcours pratiques en ligne pour apprendre une technologie, réaliser un projet concret et progresser avec un accompagnement humain.
+          </p>
+
+          <p class="f-hero-note">
+            Chaque formation ouvre à une date précise et accueille un nombre limité de participants afin de conserver un véritable suivi.
+          </p>
+
+          <div class="f-hero-ctas">
+            <a href="#autres-formations" class="btn btn-primary f-btn-hero-primary">
+              Voir les prochaines formations
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+            </a>
+            <a href="#parcours" class="btn btn-glass f-btn-hero-secondary">
+              Comment ça fonctionne ?
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 2. SECTION PROCHAINE COHORTE ─────────────────────────── -->
+    <section id="prochaine-cohorte" class="f-section-cohort">
+      <div class="container">
+        
+        <div class="f-cohort-card g-card">
+          <!-- Laser décoratif en haut de carte -->
+          <div class="f-laser-accent" aria-hidden="true"></div>
+
+          <!-- En-tête statut et cohorte -->
+          <div class="f-cohort-top">
+            <div class="f-cohort-super-tag">
+              <span class="f-pulse-dot" aria-hidden="true"></span>
+              PROCHAINE COHORTE
+            </div>
+            <div class="f-status-pill">
+              <span class="f-status-dot"></span>
+              <span id="fStatusText">Inscriptions ouvertes</span>
+            </div>
+          </div>
+
+          <!-- Titre & Description de la formation -->
+          <div class="f-cohort-headline">
+            <h2 class="f-cohort-title">Créer un site web avec l'IA</h2>
+            <p class="f-cohort-desc">
+              De l'idée à la mise en ligne, construis ton propre site web avec l'aide des outils d'intelligence artificielle.
+            </p>
+          </div>
+
+          <!-- Grille des 4 Informations Blocs -->
+          <div class="f-info-blocks">
+            <!-- Bloc 1 : Date de début -->
+            <div class="f-info-block">
+              <div class="f-block-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div class="f-block-meta">
+                <span class="f-block-label">Début</span>
+                <strong class="f-block-val" id="fStartDate">15 octobre 2026</strong>
+              </div>
+            </div>
+
+            <!-- Bloc 2 : Durée -->
+            <div class="f-info-block">
+              <div class="f-block-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="f-block-meta">
+                <span class="f-block-label">Durée</span>
+                <strong class="f-block-val">4 semaines</strong>
+              </div>
+            </div>
+
+            <!-- Bloc 3 : Format -->
+            <div class="f-info-block">
+              <div class="f-block-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div class="f-block-meta">
+                <span class="f-block-label">Format</span>
+                <strong class="f-block-val">100 % en ligne</strong>
+              </div>
+            </div>
+
+            <!-- Bloc 4 : Places -->
+            <div class="f-info-block">
+              <div class="f-block-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="f-block-meta">
+                <span class="f-block-label">Places</span>
+                <strong class="f-block-val">10 participants max</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Jauge / Progression des places disponibles -->
+          <div class="f-gauge-container">
+            <div class="f-gauge-head">
+              <span class="f-gauge-label">DISPONIBILITÉ DE LA SESSION</span>
+              <span class="f-gauge-seats" id="fSeatsText"><strong>7</strong> / 10 places disponibles</span>
+            </div>
+            <div class="f-progress-track">
+              <div class="f-progress-fill" id="fProgressFill" style="width: 70%;"></div>
+            </div>
+          </div>
+
+          <!-- Compte à rebours dynamique jusqu'au 15 octobre 2026 -->
+          <div class="f-countdown-wrap" id="fCountdownWrap">
+            <div class="f-countdown-title">LANCEMENT DANS</div>
+            <div class="f-countdown-grid">
+              <div class="f-cd-box">
+                <span class="f-cd-num" id="cdDays">--</span>
+                <span class="f-cd-lbl">Jours</span>
+              </div>
+              <div class="f-cd-sep">:</div>
+              <div class="f-cd-box">
+                <span class="f-cd-num" id="cdHours">--</span>
+                <span class="f-cd-lbl">Heures</span>
+              </div>
+              <div class="f-cd-sep">:</div>
+              <div class="f-cd-box">
+                <span class="f-cd-num" id="cdMinutes">--</span>
+                <span class="f-cd-lbl">Minutes</span>
+              </div>
+              <div class="f-cd-sep">:</div>
+              <div class="f-cd-box">
+                <span class="f-cd-num" id="cdSeconds">--</span>
+                <span class="f-cd-lbl">Secondes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Boutons d'action -->
+          <!-- Boutons d'action -->
+          <div class="f-cohort-actions">
+            <button type="button" class="btn f-btn-electric js-trigger-resa-modal" id="btnOpenResaModal" onclick="window.openResaModal &amp;&amp; window.openResaModal()" aria-haspopup="dialog" aria-controls="resaModal">
+              <span>Réserver ma place</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <a href="#programme-detail" class="btn btn-glass f-btn-program">
+              Voir le programme
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── POPUP MODAL : FORMULAIRE DE RÉSERVATION (STYLE 2 COLONNES PREMIUM) ─ -->
+    <div id="resaModal" class="f-popup-overlay f-modal-reservation-overlay" style="display:none;" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resaModalTitle">
+      <div class="f-modal-premium-card">
+        <!-- Bouton Fermer le modal -->
+        <button type="button" class="f-modal-close" id="resaModalClose" onclick="window.closeResaModal &amp;&amp; window.closeResaModal()" aria-label="Fermer la fenêtre">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+
+        <div class="f-modal-premium-grid">
+          
+          <!-- ── COLONNE GAUCHE : APERÇU ET DÉTAILS COHORTE ── -->
+          <div class="f-modal-left-col">
+            <!-- Badge en-tête -->
+            <div class="f-modal-badge-pill">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <span>PROCHAINE COHORTE · OCTOBRE 2026</span>
+            </div>
+
+            <!-- Titre Principal -->
+            <h2 class="f-modal-big-title" id="resaModalTitle">
+              Réserver<br>
+              <span class="f-modal-title-accent">ma place</span>
+            </h2>
+
+            <p class="f-modal-course-sub">
+              Formation : <strong>Créer un site web avec l'IA</strong>
+            </p>
+
+            <!-- Mockup Laptop Pro -->
+            <div class="f-modal-laptop-wrap">
+              <img src="laptop-preview.jpg" alt="Aperçu projet web créé durant la formation" class="f-modal-laptop-img" loading="eager">
+            </div>
+
+            <!-- Chips / Pilules d'informations -->
+            <div class="f-modal-chips-row">
+              <div class="f-modal-chip">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                <span>100 % en ligne</span>
+              </div>
+              <div class="f-modal-chip">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>15 Octobre 2026</span>
+              </div>
+              <div class="f-modal-chip f-modal-chip--places">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span><strong id="resaPlacesLeft">7/10</strong> places disponibles</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ── COLONNE DROITE : FORMULAIRE PRO ── -->
+          <div class="f-modal-right-col">
+            <h3 class="f-modal-form-heading">Mes informations</h3>
+            <p class="f-modal-form-intro">Remplissez ce formulaire pour réserver votre place à la prochaine cohorte.</p>
+
+            <form id="resaForm" class="f-modal-form" novalidate autocomplete="off">
+              <!-- Honeypot anti-bot -->
+              <input type="text" name="website_hp" style="display:none !important" tabindex="-1" autocomplete="off">
+              <!-- Champ caché formation -->
+              <input type="hidden" name="formation" id="modalFormationInput" value="Créer un site web avec l'IA">
+
+              <!-- Champ Prénom -->
+              <div class="f-mfield">
+                <label class="f-mlabel" for="resaPrenom">PRÉNOM <span class="f-mreq">*</span></label>
+                <div class="f-minput-box">
+                  <svg class="f-micon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <input class="f-minput" type="text" id="resaPrenom" name="prenom" placeholder="Votre prénom" required>
+                </div>
+              </div>
+
+              <!-- Champ Nom -->
+              <div class="f-mfield">
+                <label class="f-mlabel" for="resaNom">NOM</label>
+                <div class="f-minput-box">
+                  <svg class="f-micon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                  <input class="f-minput" type="text" id="resaNom" name="nom" placeholder="Votre nom (optionnel)">
+                </div>
+              </div>
+
+              <!-- Champ Email -->
+              <div class="f-mfield">
+                <label class="f-mlabel" for="resaEmail">ADRESSE EMAIL <span class="f-mreq">*</span></label>
+                <div class="f-minput-box">
+                  <svg class="f-micon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  <input class="f-minput" type="email" id="resaEmail" name="email" placeholder="votre@email.com" required>
+                </div>
+              </div>
+
+              <!-- Champ WhatsApp avec Indicatif Pays et Icone -->
+              <div class="f-mfield">
+                <label class="f-mlabel" for="resaWhatsapp">NUMÉRO WHATSAPP <span class="f-mopt">(international · direct)</span></label>
+                <div class="f-minput-box f-minput-box--phone">
+                  <svg class="f-micon f-micon--wa" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.8 14.4c-.24.68-1.4 1.25-1.92 1.33-.49.07-1.12.1-3.26-.78-2.74-1.13-4.5-3.92-4.63-4.1-.14-.19-1.1-1.46-1.1-2.79s.69-1.98.94-2.25c.25-.27.54-.34.72-.34.18 0 .36 0 .52.01.17.01.39-.06.61.47.23.55.78 1.9.85 2.04.07.14.12.3.02.49-.09.19-.14.3-.28.46-.14.16-.3.35-.42.47-.14.14-.29.29-.12.57.17.28.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.15.25.09 1.6.76 1.87.89.27.14.46.2.53.31.06.12.06.7-.18 1.38z"/></svg>
+                  <div class="f-mcountry-picker">
+                    <select class="f-mcountry-select" id="resaIndicatif" name="indicatif" aria-label="Indicatif téléphonique international">
+                      <option value="+237" selected>🇨🇲 +237 (Cameroun)</option>
+                      <option value="+33">🇫🇷 +33 (France)</option>
+                      <option value="+225">🇨🇮 +225 (Côte d'Ivoire)</option>
+                      <option value="+221">🇸🇳 +221 (Sénégal)</option>
+                      <option value="+1">🇨🇦/🇺🇸 +1 (Canada / USA)</option>
+                      <option value="+32">🇧🇪 +32 (Belgique)</option>
+                      <option value="+41">🇨🇭 +41 (Suisse)</option>
+                      <option value="+241">🇬🇦 +241 (Gabon)</option>
+                      <option value="+242">🇨🇬 +242 (Congo-Brazza)</option>
+                      <option value="+243">🇨🇩 +243 (RDC)</option>
+                      <option value="+212">🇲🇦 +212 (Maroc)</option>
+                      <option value="+216">🇹🇳 +216 (Tunisie)</option>
+                      <option value="+213">🇩🇿 +213 (Algérie)</option>
+                      <option value="+229">🇧🇯 +229 (Bénin)</option>
+                      <option value="+228">🇹🇬 +228 (Togo)</option>
+                      <option value="+223">🇲🇱 +223 (Mali)</option>
+                      <option value="+226">🇧🇫 +226 (Burkina Faso)</option>
+                      <option value="+224">🇬🇳 +224 (Guinée)</option>
+                      <option value="+227">🇳🇪 +227 (Niger)</option>
+                      <option value="+235">🇹🇩 +235 (Tchad)</option>
+                      <option value="+236">🇨🇫 +236 (Centrafrique)</option>
+                      <option value="+240">🇬🇶 +240 (Guinée Éq.)</option>
+                      <option value="+261">🇲🇬 +261 (Madagascar)</option>
+                      <option value="+250">🇷🇼 +250 (Rwanda)</option>
+                      <option value="+44">🇬🇧 +44 (Royaume-Uni)</option>
+                      <option value="+49">🇩🇪 +49 (Allemagne)</option>
+                      <option value="+39">🇮🇹 +39 (Italie)</option>
+                      <option value="+34">🇪🇸 +34 (Espagne)</option>
+                      <option value="+">🌍 Autre pays (+...)</option>
+                    </select>
+                    <svg class="f-mcountry-arrow" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </div>
+                  <input class="f-minput f-minput--tel" type="tel" id="resaWhatsapp" name="whatsapp" placeholder="Ex: 6 93 29 01 35">
+                </div>
+              </div>
+
+              <!-- Champ Niveau / Questions -->
+              <div class="f-mfield">
+                <label class="f-mlabel" for="resaMessage">VOTRE NIVEAU OU QUESTIONS <span class="f-mopt">(optionnel)</span></label>
+                <div class="f-minput-box f-minput-box--textarea">
+                  <svg class="f-micon f-micon--top" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  <textarea class="f-minput f-mtextarea" id="resaMessage" name="message" rows="2" placeholder="Ex : Débutant, intermédiaire, projet en tête..."></textarea>
+                </div>
+              </div>
+
+              <!-- Bouton de soumission stylé -->
+              <button type="submit" class="f-mbtn-submit" id="resaSubmitBtn">
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <span id="resaBtnText">Réserver ma place</span>
+                <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+
+              <!-- Mentions de sécurité discrètes -->
+              <div class="f-msecurity-line">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                <span>Vos informations sont sécurisées et ne seront jamais partagées.</span>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 2b. BANNIÈRE INVITATION RÉSERVATION ─────────────────── -->
+    <section id="reservation" class="f-section-reservation-banner">
+      <div class="container">
+        <div class="f-resa-banner-card">
+          <div class="f-resa-banner-content">
+            <span class="sec-pill sec-pill--mono">Accompagnement Sur-Mesure</span>
+            <h2 class="f-resa-banner-title">Prêt à construire ton projet web avec l'IA ?</h2>
+            <p class="f-resa-banner-sub">
+              Les cohortes sont limitées à 10 participants afin de garantir un suivi individuel pour chaque apprenant.
+            </p>
+          </div>
+          <div class="f-resa-banner-actions">
+            <button type="button" class="btn f-btn-electric js-trigger-resa-modal" onclick="window.openResaModal &amp;&amp; window.openResaModal()">
+              <span>Réserver ma place</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <a href="https://wa.me/237693290135" target="_blank" rel="noopener" class="btn btn-glass">
+              Discuter sur WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── POPUP DE SUCCÈS RESERVATION ─────────────────────────── -->
+    <div id="resaSuccessPopup" class="f-popup-overlay" style="display:none;" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="resaPopupTitle">
+      <div class="f-popup-card">
+        <div class="f-popup-icon-wrap">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="44" height="44">
+            <circle cx="24" cy="24" r="23" stroke="#ffffff" stroke-width="2"/>
+            <polyline points="14,24 21,31 34,17" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="f-popup-title" id="resaPopupTitle">Demande transmise.</h3>
+        <p class="f-popup-body" id="resaPopupMsg">Un email de confirmation vous a été envoyé. Je reviendrai vers vous sous 48 h.</p>
+        <button class="btn f-btn-electric f-popup-close" id="resaPopupClose" onclick="window.hideSuccessPopup &amp;&amp; window.hideSuccessPopup()">Fermer</button>
+      </div>
+    </div>
+
+    <!-- ── 3. SECTION POURQUOI DES PLACES LIMITÉES ? ────────────── -->
+    <section class="f-section-why">
+      <div class="container">
+        <div class="f-why-card">
+          <div class="f-why-badge">ENGAGEMENT DE QUALITÉ</div>
+          <h2 class="f-why-title">Pourquoi des places limitées ?</h2>
+          <p class="f-why-quote">
+            « Les places sont volontairement limitées pour permettre un meilleur suivi des participants, répondre aux questions et prendre le temps de regarder les projets de chacun. »
+          </p>
+          <div class="f-why-pillars">
+            <div class="f-why-col">
+              <div class="f-why-icon">01</div>
+              <h4>Disponibilité réelle</h4>
+              <p>Pas de réponses automatisées : chaque question technique est traitée avec attention.</p>
+            </div>
+            <div class="f-why-col">
+              <div class="f-why-icon">02</div>
+              <h4>Revue des projets</h4>
+              <p>Je regarde le code et l'interface de chaque apprenant pour apporter des corrections ciblées.</p>
+            </div>
+            <div class="f-why-col">
+              <div class="f-why-icon">03</div>
+              <h4>Émulation collective</h4>
+              <p>Un petit groupe soudé où tout le monde avance au même rythme sans être laissé pour compte.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 4. SECTION LE PARCOURS ────────────────────────────────── -->
+    <section id="parcours" class="f-section-journey">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-pill sec-pill--mono">Méthodologie</span>
+          <h2 class="sec-title">Le Parcours.</h2>
+          <p class="sec-desc">Une progression structurée en 4 temps pour transformer votre apprentissage en maîtrise concrète.</p>
+        </div>
+
+        <div class="f-journey-track">
+          <!-- Étape 1 -->
+          <div class="f-journey-step">
+            <div class="f-j-number">01</div>
+            <div class="f-j-node"></div>
+            <h3 class="f-j-title">APPRENDRE</h3>
+            <p class="f-j-desc">Cours écrits, ressources et méthodes.</p>
+          </div>
+
+          <div class="f-j-arrow" aria-hidden="true">➔</div>
+
+          <!-- Étape 2 -->
+          <div class="f-journey-step">
+            <div class="f-j-number">02</div>
+            <div class="f-j-node"></div>
+            <h3 class="f-j-title">PRATIQUER</h3>
+            <p class="f-j-desc">Exercices et défis pratiques.</p>
+          </div>
+
+          <div class="f-j-arrow" aria-hidden="true">➔</div>
+
+          <!-- Étape 3 -->
+          <div class="f-journey-step">
+            <div class="f-j-number">03</div>
+            <div class="f-j-node"></div>
+            <h3 class="f-j-title">CONSTRUIRE</h3>
+            <p class="f-j-desc">Un projet réalisé progressivement.</p>
+          </div>
+
+          <div class="f-j-arrow" aria-hidden="true">➔</div>
+
+          <!-- Étape 4 -->
+          <div class="f-journey-step f-journey-step--final">
+            <div class="f-j-number">04</div>
+            <div class="f-j-node f-j-node--glow"></div>
+            <h3 class="f-j-title">ÊTRE ACCOMPAGNÉ</h3>
+            <p class="f-j-desc">Questions, corrections, retours et sessions de suivi.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 4b. DÉTAIL DU PROGRAMME DE LA COHORTE ──────────────────── -->
+    <section id="programme-detail" class="f-section-curriculum">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-pill sec-pill--mono">Syllabus · 4 Semaines</span>
+          <h2 class="sec-title">Le programme de la session.</h2>
+          <p class="sec-desc">Un objectif par semaine avec un livrable intermédiaire validé.</p>
+        </div>
+
+        <div class="f-curriculum-grid">
+          <div class="f-curriculum-card">
+            <span class="f-c-week">SEMAINE 01</span>
+            <h3 class="f-c-title">Cadrage, Idée &amp; Structure IA</h3>
+            <p class="f-c-desc">Définition du projet, personas, architecture de contenu et prompt engineering appliqué au cahier des charges.</p>
+            <div class="f-c-deliverable"><strong>Livrable :</strong> Structure et textes complets prêts</div>
+          </div>
+
+          <div class="f-curriculum-card">
+            <span class="f-c-week">SEMAINE 02</span>
+            <h3 class="f-c-title">Direction Artistique &amp; UI Moderne</h3>
+            <p class="f-c-desc">Conception de l'identité visuelle, choix des palettes, typographie et maquettage responsive accéléré par l'IA.</p>
+            <div class="f-c-deliverable"><strong>Livrable :</strong> Maquette visuelle haute fidélité</div>
+          </div>
+
+          <div class="f-curriculum-card">
+            <span class="f-c-week">SEMAINE 03</span>
+            <h3 class="f-c-title">Développement &amp; Intégration</h3>
+            <p class="f-c-desc">Production du code propre (HTML5 / CSS3 / JavaScript), interactivité, formulaires et adaptation sur smartphones.</p>
+            <div class="f-c-deliverable"><strong>Livrable :</strong> Site fonctionnel en environnement local</div>
+          </div>
+
+          <div class="f-curriculum-card f-c-card--final">
+            <span class="f-c-week f-c-week--highlight">SEMAINE 04</span>
+            <h3 class="f-c-title">Déploiement &amp; Mise en Ligne</h3>
+            <p class="f-c-desc">Configuration du nom de domaine, hébergement cloud sécurisé avec certificat SSL et référencement naturel initial.</p>
+            <div class="f-c-deliverable"><strong>Livrable :</strong> Votre site web officiel en ligne</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. SECTION FORMULES ───────────────────────────────────── -->
+    <section id="formules" class="f-section-plans">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-pill sec-pill--mono">Modalités</span>
+          <h2 class="sec-title">Formules.</h2>
+          <p class="sec-desc">Choisissez l'option qui correspond à votre rythme et à votre besoin de suivi.</p>
+        </div>
+
+        <div class="f-plans-grid">
+          <!-- Formule 1 : Formation -->
+          <div class="f-plan-card">
+            <div class="f-plan-header">
+              <span class="f-plan-tag">AUTONOMIE</span>
+              <h3 class="f-plan-name">FORMATION</h3>
+              <p class="f-plan-sub">« Apprendre à son rythme »</p>
+            </div>
+            <ul class="f-plan-list">
+              <li><span class="f-chk">✓</span> Cours complets</li>
+              <li><span class="f-chk">✓</span> Ressources techniques</li>
+              <li><span class="f-chk">✓</span> Exercices d'application</li>
+              <li><span class="f-chk">✓</span> Projet guidé pas à pas</li>
+            </ul>
+            <div class="f-plan-footer">
+              <a href="https://wa.me/237693290135?text=Bonjour%20Remus,%20je%20souhaite%20des%20informations%20sur%20la%20formule%20FORMATION" target="_blank" rel="noopener" class="btn btn-glass f-plan-btn">
+                Choisir cette formule
+              </a>
+            </div>
+          </div>
+
+          <!-- Formule 2 : Accompagnement (Mise en avant) -->
+          <div class="f-plan-card f-plan-card--featured">
+            <div class="f-plan-ribbon">RECOMMANDÉ // COHORTE</div>
+            <div class="f-plan-header">
+              <span class="f-plan-tag f-plan-tag--highlight">PARCOURS COLLECTIF</span>
+              <h3 class="f-plan-name">ACCOMPAGNEMENT</h3>
+              <p class="f-plan-sub">« Apprendre avec un suivi »</p>
+            </div>
+            <ul class="f-plan-list">
+              <li><span class="f-chk">✓</span> Tout le contenu de la formation</li>
+              <li><span class="f-chk">✓</span> Accès au groupe privé de cohorte</li>
+              <li><span class="f-chk">✓</span> Sessions live de travail</li>
+              <li><span class="f-chk">✓</span> Corrections &amp; retours sur votre code</li>
+              <li><span class="f-chk">✓</span> Suivi régulier de progression</li>
+            </ul>
+            <div class="f-plan-footer">
+              <a href="https://wa.me/237693290135?text=Bonjour%20Remus,%20je%20souhaite%20rejoindre%20la%20formule%20ACCOMPAGNEMENT" target="_blank" rel="noopener" class="btn f-btn-electric f-plan-btn">
+                Choisir cette formule
+              </a>
+            </div>
+          </div>
+
+          <!-- Formule 3 : Mentorat -->
+          <div class="f-plan-card">
+            <div class="f-plan-header">
+              <span class="f-plan-tag">SUR-MESURE</span>
+              <h3 class="f-plan-name">MENTORAT</h3>
+              <p class="f-plan-sub">« Un accompagnement personnalisé »</p>
+            </div>
+            <ul class="f-plan-list">
+              <li><span class="f-chk">✓</span> Suivi individuel sur mesure</li>
+              <li><span class="f-chk">✓</span> Revue détaillée de votre projet</li>
+              <li><span class="f-chk">✓</span> Conseils stratégiques &amp; techniques personnalisés</li>
+              <li><span class="f-chk">✓</span> Sessions individuelles 1-to-1 avec Remus</li>
+            </ul>
+            <div class="f-plan-footer">
+              <a href="https://wa.me/237693290135?text=Bonjour%20Remus,%20je%20souhaite%20postuler%20pour%20un%20MENTORAT%20personnalis%C3%A9" target="_blank" rel="noopener" class="btn btn-glass f-plan-btn">
+                Choisir cette formule
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 6. SECTION AUTRES PROCHAINES FORMATIONS ──────────────── -->
+    <section id="autres-formations" class="f-section-upcoming">
+      <div class="container">
+        <div class="sec-header">
+          <span class="sec-pill sec-pill--mono">Calendrier Prévisionnel</span>
+          <h2 class="sec-title">Autres prochaines formations.</h2>
+          <p class="sec-desc">Les futures thématiques en préparation. Inscrivez-vous pour être prévenu de l'ouverture des places.</p>
+        </div>
+
+        <div class="f-upcoming-grid">
+
+          <!-- Carte A — Développement -->
+          <div class="f-upcoming-card g-card f-ucard--dev">
+            <div class="f-u-top">
+              <span class="f-u-index">A</span>
+              <span class="f-u-badge">DÉVELOPPEMENT</span>
+            </div>
+            <h3 class="f-u-title">Développer avec l'IA</h3>
+            <p class="f-u-pitch">Passer du site statique à une application web dynamique en utilisant l'IA comme copilote de code.</p>
+            <div class="f-u-skills">
+              <span class="f-u-skill">JavaScript</span>
+              <span class="f-u-skill">APIs REST</span>
+              <span class="f-u-skill">Base de données</span>
+            </div>
+            <div class="f-u-meta">
+              <div class="f-u-row">
+                <span class="f-u-key">Début :</span>
+                <span class="f-u-val">Date à venir</span>
+              </div>
+              <div class="f-u-row">
+                <span class="f-u-key">Places :</span>
+                <span class="f-u-val">10 participants</span>
+              </div>
+              <div class="f-u-row">
+                <span class="f-u-key">Durée :</span>
+                <span class="f-u-val">5 semaines</span>
+              </div>
+            </div>
+            <a href="https://wa.me/237693290135?text=Bonjour%20Remus,%20je%20souhaite%20%C3%AAtre%20notifi%C3%A9%20pour%20la%20formation%20%C2%AB%20D%C3%A9velopper%20avec%20l'IA%20%C2%BB" target="_blank" rel="noopener" class="btn btn-glass f-u-btn">
+              Être notifié de l'ouverture
+            </a>
+          </div>
+
+          <!-- Carte B — Initiation -->
+          <div class="f-upcoming-card g-card f-ucard--init">
+            <div class="f-u-top">
+              <span class="f-u-index">B</span>
+              <span class="f-u-badge">INITIATION</span>
+            </div>
+            <h3 class="f-u-title">Premier projet web</h3>
+            <p class="f-u-pitch">De zéro absolu à un premier projet web complet et hébergé. Aucun prérequis technique exigé.</p>
+            <div class="f-u-skills">
+              <span class="f-u-skill">HTML / CSS</span>
+              <span class="f-u-skill">Mise en ligne</span>
+              <span class="f-u-skill">Prompting IA</span>
+            </div>
+            <div class="f-u-meta">
+              <div class="f-u-row">
+                <span class="f-u-key">Début :</span>
+                <span class="f-u-val">Date à venir</span>
+              </div>
+              <div class="f-u-row">
+                <span class="f-u-key">Places :</span>
+                <span class="f-u-val">12 participants</span>
+              </div>
+              <div class="f-u-row">
+                <span class="f-u-key">Durée :</span>
+                <span class="f-u-val">3 semaines</span>
+              </div>
+            </div>
+            <a href="https://wa.me/237693290135?text=Bonjour%20Remus,%20je%20souhaite%20%C3%AAtre%20notifi%C3%A9%20pour%20la%20formation%20%C2%AB%20Cr%C3%A9er%20son%20premier%20projet%20web%20%C2%BB" target="_blank" rel="noopener" class="btn btn-glass f-u-btn">
+              Être notifié de l'ouverture
+            </a>
+          </div>
+
+          <!-- Carte C — Business -->
+          <div class="f-upcoming-card g-card f-ucard--biz">
+            <div class="f-u-top">
+              <span class="f-u-index">C</span>
+              <span class="f-u-badge">BUSINESS</span>
+            </div>
+            <h3 class="f-u-title">Lancer son freelance</h3>
+            <p class="f-u-pitch">Structurer son offre, trouver ses premiers clients et gérer son activité freelance avec l'appui de l'IA.</p>
+            <div class="f-u-skills">
+              <span class="f-u-skill">Positionnement</span>
+              <span class="f-u-skill">Prospection</span>
+              <span class="f-u-skill">Outils IA</span>
+            </div>
+            <div class="f-u-meta">
+              <div class="f-u-row">
+                <span class="f-u-key">Début :</span>
+                <span class="f-u-val">Date à venir</span>
+              </div>
+              <div class="f-u-row">
+                <span class="f-u-key">Places :</span>
+                <span class="f-u-val">10 participants</span>
+              </div>
+              <div class="f-u-row">
+                <span class="f-u-key">Durée :</span>
+                <span class="f-u-val">4 semaines</span>
+              </div>
+            </div>
+            <a href="https://wa.me/237693290135?text=Bonjour%20Remus,%20je%20souhaite%20%C3%AAtre%20notifi%C3%A9%20pour%20la%20formation%20%C2%AB%20Lancer%20son%20activit%C3%A9%20freelance%20avec%20l'IA%20%C2%BB" target="_blank" rel="noopener" class="btn btn-glass f-u-btn">
+              Être notifié de l'ouverture
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 6b. SECTION COHORTES PASSÉES ─────────────────────────── -->
+    <section id="cohortes-passees" class="f-section-past">
+      <div class="container">
+        
+        <div class="sec-header">
+          <span class="sec-pill sec-pill--mono">Historique &amp; Résultats</span>
+          <h2 class="sec-title">Cohortes passées.</h2>
+          <p class="sec-desc">Un historique transparent des sessions achevées, du nombre de participants accompagnés et des projets menés à terme.</p>
+        </div>
+
+        <!-- Statistiques globales consolidées -->
+        <div class="f-past-stats-grid">
+          <div class="f-past-stat-card">
+            <span class="f-past-stat-num">26</span>
+            <span class="f-past-stat-label">Participants formés</span>
+          </div>
+          <div class="f-past-stat-card">
+            <span class="f-past-stat-num">100 %</span>
+            <span class="f-past-stat-label">Projets déployés</span>
+          </div>
+          <div class="f-past-stat-card">
+            <span class="f-past-stat-num">03</span>
+            <span class="f-past-stat-label">Cohortes achevées</span>
+          </div>
+        </div>
+
+        <!-- Grille des cohortes passées -->
+        <div class="f-past-grid">
+
+          <!-- Cohorte #03 -->
+          <div class="f-past-card g-card">
+            <div class="f-past-top">
+              <span class="f-past-cohort-badge">COHORTE #03</span>
+              <span class="f-past-status-badge">
+                <span class="f-past-status-dot"></span>
+                Terminée · Juin 2026
+              </span>
+            </div>
+            <h3 class="f-past-title">« Créer un site web avec l'IA »</h3>
+            <div class="f-past-participants-box">
+              <span class="f-past-part-label">Participants</span>
+              <span class="f-past-part-val">10 / 10 (Complet)</span>
+            </div>
+            <p class="f-past-desc">
+              10 participants ont conçu, intégré et mis en ligne leur plateforme web avec nom de domaine dédié et hébergement cloud.
+            </p>
+            <div class="f-past-tags">
+              <span class="f-past-tag">Portfolios pros</span>
+              <span class="f-past-tag">Sites vitrines</span>
+              <span class="f-past-tag">Landing pages</span>
+            </div>
+          </div>
+
+          <!-- Cohorte #02 -->
+          <div class="f-past-card g-card">
+            <div class="f-past-top">
+              <span class="f-past-cohort-badge">COHORTE #02</span>
+              <span class="f-past-status-badge">
+                <span class="f-past-status-dot"></span>
+                Terminée · Février 2026
+              </span>
+            </div>
+            <h3 class="f-past-title">« Automatisation &amp; Workflows IA »</h3>
+            <div class="f-past-participants-box">
+              <span class="f-past-part-label">Participants</span>
+              <span class="f-past-part-val">8 / 8 (Complet)</span>
+            </div>
+            <p class="f-past-desc">
+              8 participants ont automatisé des processus métiers complets : gestion de formulaires, intégration d'API et agents connectés.
+            </p>
+            <div class="f-past-tags">
+              <span class="f-past-tag">Workflows API</span>
+              <span class="f-past-tag">Scripts IA</span>
+              <span class="f-past-tag">Webhooks</span>
+            </div>
+          </div>
+
+          <!-- Cohorte #01 -->
+          <div class="f-past-card g-card">
+            <div class="f-past-top">
+              <span class="f-past-cohort-badge">COHORTE #01</span>
+              <span class="f-past-status-badge">
+                <span class="f-past-status-dot"></span>
+                Terminée · Novembre 2025
+              </span>
+            </div>
+            <h3 class="f-past-title">« Fondations du Web Moderne &amp; IA »</h3>
+            <div class="f-past-participants-box">
+              <span class="f-past-part-label">Participants</span>
+              <span class="f-past-part-val">8 / 8 (Complet)</span>
+            </div>
+            <p class="f-past-desc">
+              8 participants ont appris les fondamentaux du code propre assisté par l'IA et validé leur première application web interactive.
+            </p>
+            <div class="f-past-tags">
+              <span class="f-past-tag">HTML / CSS / JS</span>
+              <span class="f-past-tag">Prompts code</span>
+              <span class="f-past-tag">Git &amp; Déploiement</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 6c. SECTION CERTIFICATION OFFICIELLE & VÉRIFICATION EN LIGNE ── -->
+    <section id="cert-trust" class="f-section-cert-trust" style="padding: 70px 0; border-top: 1px solid rgba(255,255,255,0.06); background: linear-gradient(180deg, rgba(14,15,20,0.4) 0%, rgba(8,9,12,0.9) 100%);">
+      <div class="container">
+        <div class="g-card" style="border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 20px; padding: 40px; background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.05), transparent 60%), #111218; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
+          <div style="max-width: 580px;">
+            <div style="display: inline-flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #fbbf24; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.25); padding: 4px 12px; border-radius: 999px; margin-bottom: 14px;">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> CERTIFICATION SÉCURISÉE &amp; INFALSIFIABLE
+            </div>
+            <h3 style="font-size: 1.6rem; font-weight: 800; color: #ffffff; margin-bottom: 12px; line-height: 1.25;">
+              Chaque formation délivre un certificat officiel vérifiable publiquement.
+            </h3>
+            <p style="color: #a1a1aa; font-size: 0.92rem; line-height: 1.6; margin: 0;">
+              Tous les apprenants certifiés disposent d'un identifiant unique et d'un QR code permanent. Les recruteurs, clients et partenaires peuvent contrôler l'authenticité de vos compétences sur notre registre public en ligne.
+            </p>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="verify.php" class="btn btn-primary" style="padding: 14px 24px; font-weight: 700; display: inline-flex; align-items: center; gap: 10px;">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <span>Vérifier un certificat en direct</span>
+            </a>
+            <a href="verify.php?cert=CERT-2026-0158" target="_blank" style="text-align: center; font-size: 0.8rem; color: #71717a; text-decoration: underline;">
+              Voir le certificat modèle (CERT-2026-0158) ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 7. SECTION FINALE ──────────────────────────────────────── -->
+    <section class="f-section-final-cta">
+      <div class="container">
+        <div class="f-final-card">
+          <div class="f-final-glow-line" aria-hidden="true"></div>
+          
+          <h2 class="f-final-big-title">Tu as un projet en tête ?</h2>
+          <p class="f-final-pitch">
+            Tu n'as pas besoin d'attendre la prochaine formation. Parlons de ton projet et voyons comment je peux t'accompagner.
+          </p>
+
+          <div class="f-final-btn-wrap">
+            <a href="https://wa.me/237693290135?text=Bonjour%20Remus,%20j'ai%20un%20projet%20en%20t%C3%AAte%20et%20je%20souhaite%20en%20parler%20avec%20toi" target="_blank" rel="noopener" class="btn f-btn-electric" style="padding:16px 36px; font-size:1.02rem;">
+              <span>Parler de mon projet</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="index.html#contact" class="btn btn-glass" style="padding:16px 28px;">
+              Formulaire de contact
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-monumental-wrap" aria-hidden="true">
+      <div class="footer-monumental-text">DR REMUS</div>
+    </div>
+    <div class="container foot-inner">
+      <p class="foot-copy">© 2026 <strong>Dr Remus</strong> · Formations &amp; Accompagnement · <a href="index.html" style="color:#ffffff; text-decoration:underline;">Retour au portfolio</a></p>
+    </div>
+  </footer>
+
+  <!-- ═══ BOUTON FLOTTANT WHATSAPP ═════════════════════════════════ -->
+  <a href="https://wa.me/237693290135?text=Bonjour%20Remus,%20je%20te%20contacte%20depuis%20la%20page%20Formations" class="wa-float-btn" target="_blank" rel="noopener" aria-label="Contacter Dr Remus sur WhatsApp">
+    <span class="wa-float-pulse" aria-hidden="true"></span>
+    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+      <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.275-.101-.476-.15-.677.15-.2.299-.776.978-.952 1.178-.175.199-.35.225-.651.075-.3-.15-1.271-.468-2.42-1.493-.895-.798-1.5-1.784-1.676-2.084-.175-.3-.019-.462.132-.611.135-.134.3-.35.45-.525.15-.175.2-.299.3-.499.1-.2.05-.374-.025-.524-.075-.15-.677-1.632-.927-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.525.075-.8.374s-1.052 1.028-1.052 2.508 1.077 2.908 1.228 3.107c.15.2 2.12 3.237 5.137 4.54.717.31 1.277.495 1.713.633.72.228 1.376.196 1.894.119.577-.086 1.78-.728 2.03-1.432.251-.705.251-1.308.176-1.433-.075-.125-.276-.2-.577-.35zM12.042 21.84c-1.77 0-3.504-.476-5.025-1.378l-.36-.213-3.733.979.996-3.64-.235-.374A9.79 9.79 0 0 1 2.25 12.05C2.25 6.649 6.64 2.25 12.042 2.25c2.614 0 5.072 1.018 6.92 2.866a9.73 9.73 0 0 1 2.871 6.924c0 5.401-4.39 9.8-9.791 9.8zM12.042 0C5.402 0 .01 5.392.01 12.031c0 2.12.553 4.188 1.603 6.009L0 24l6.136-1.61a12.007 12.007 0 0 0 5.906 1.542h.005c6.64 0 12.031-5.392 12.031-12.031A12.03 12.03 0 0 0 12.042 0z"/>
+    </svg>
+    <span class="wa-float-txt">WhatsApp</span>
+  </a>
+
+  <!-- ═══ TRACKING ANALYTICS VISITEURS (GRAFANA) ═══════════════════ -->
+  <script>
+    (function(){
+      try {
+        var page = 'formation.html';
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon('track.php?p=' + encodeURIComponent(page));
+        } else {
+          fetch('track.php?p=' + encodeURIComponent(page), { mode: 'no-cors' });
+        }
+      } catch(e){}
+    })();
+  </script>
+
+</body>
+</html>

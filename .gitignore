@@ -1,0 +1,13 @@
+# Secrets et variables d'environnement
+.env
+
+# Fichiers temporaires et logs
+*.log
+*.tmp
+*.bak
+
+# Fichiers système et éditeurs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

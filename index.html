@@ -1,0 +1,2124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio de Dr Remus — Technicien en Automatisme &amp; Développeur Full-Stack. Je transforme des problématiques réelles en applications, plateformes et systèmes intelligents grâce au développement logiciel, à l’IA et aux technologies connectées.">
+  <title>Dr Remus · Technicien en Automatisme &amp; Développeur Full-Stack</title>
+  <link rel="icon" href="logo.jpg" type="image/jpeg">
+  <link rel="apple-touch-icon" href="logo.jpg">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/projects.js" defer></script>
+</head>
+<body>
+
+<!-- ═══ CINEMATIC INTRO (DR REMUS MONUMENTAL & EXPLOSION LUMINEUSE — 6s) ═════ -->
+<div id="cyberLoader" class="cyber-loader" aria-label="Introduction Dr Remus">
+  <!-- Scanlines & Vignette CRT -->
+  <div class="cyber-scanlines" aria-hidden="true"></div>
+  <div class="cyber-vignette" aria-hidden="true"></div>
+
+  <!-- Bouton Passer -->
+  <button id="cyberSkipBtn" class="cyber-skip-btn" type="button" aria-label="Passer l'animation">
+    PASSER <span>[ESC ➔]</span>
+  </button>
+
+  <!-- En-tête discret de télémétrie -->
+  <div class="remus-intro-topbar" aria-hidden="true">
+    <span class="remus-top-node">SYS_INIT // DR_REMUS_PORTFOLIO</span>
+    <span class="remus-top-badge"><i class="remus-pulse-dot"></i> LIVE</span>
+  </div>
+
+  <!-- Cœur Monumental DR REMUS -->
+  <div class="cyber-cinema-stage">
+    <div class="remus-centerpiece" id="remusCenterpiece">
+      <!-- Anneaux technologiques d'arrière-plan en rotation lente -->
+      <div class="remus-halo-ring remus-halo-ring--1" aria-hidden="true"></div>
+      <div class="remus-halo-ring remus-halo-ring--2" aria-hidden="true"></div>
+
+      <!-- Typographie Monumentale -->
+      <h1 class="remus-epic-name" id="remusEpicName">DR REMUS</h1>
+      <p class="remus-epic-subtitle" id="remusEpicSub">TECHNICIEN EN AUTOMATISME &amp; DÉVELOPPEUR FULL-STACK</p>
+
+      <!-- Effet d'explosion lumineuse subtile (Multi-ondes de choc + bloom) -->
+      <div class="remus-shockwave-ring ring-primary" id="remusShockwave" aria-hidden="true"></div>
+      <div class="remus-shockwave-ring ring-secondary" id="remusShockwave2" aria-hidden="true"></div>
+      <div class="remus-radial-flare" id="remusFlare" aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- Flash cinéma final -->
+  <div id="cyberFlash" class="cyber-flash" aria-hidden="true"></div>
+</div>
+
+<!-- ═══ AMBIENT (Lueurs monochromes argentées) ═══════════════════ -->
+<div class="ambient" aria-hidden="true">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="orb orb-4"></div>
+</div>
+
+<!-- ═══ AMBIENT GRID (Subtile grille technique) ══════════════════ -->
+<div class="ambient-grid" aria-hidden="true"></div>
+
+<!-- ═══ NAVIGATION ══════════════════════════════════════════════ -->
+<header class="site-nav">
+  <nav class="nav-inner" aria-label="Navigation principale">
+    <a href="#accueil" class="nav-logo">
+      <div class="logo-mark">
+        <img src="logo.jpg" alt="Logo Dr Remus" width="42" height="42">
+      </div>
+      <span>Dr Remus<em>.</em></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#accueil"     class="nav-link active">Accueil</a></li>
+      <li><a href="#a-propos"    class="nav-link">À propos</a></li>
+      <li><a href="#competences" class="nav-link">Compétences</a></li>
+      <li><a href="#projets"     class="nav-link">Projets</a></li>
+      <li><a href="#temoignages" class="nav-link">Témoignages</a></li>
+      <li><a href="formation.html" class="nav-link">Formation</a></li>
+    </ul>
+    <div class="nav-cta-wrap">
+      <a href="#contact" class="btn btn-primary">Me contacter</a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HÉRO
+═══════════════════════════════════════════════════════════════ -->
+<section id="accueil" class="hero">
+
+  <!-- ── Décors de fond HÉRO ── -->
+  <div class="sec-deco" aria-hidden="true">
+
+    <!-- Circuit board traces — droite haut -->
+    <svg class="deco-circuit" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#ffffff" stroke-width="1.2">
+        <!-- Traces horizontales -->
+        <line x1="50" y1="80" x2="250" y2="80"/><line x1="250" y1="80" x2="250" y2="140"/>
+        <line x1="80" y1="140" x2="320" y2="140"/><line x1="320" y1="140" x2="320" y2="200"/>
+        <line x1="100" y1="200" x2="380" y2="200"/><line x1="380" y1="200" x2="380" y2="260"/>
+        <line x1="60" y1="260" x2="280" y2="260"/><line x1="280" y1="260" x2="280" y2="320"/>
+        <line x1="120" y1="320" x2="420" y2="320"/><line x1="420" y1="320" x2="420" y2="380"/>
+        <line x1="80" y1="380" x2="340" y2="380"/>
+        <!-- Traces verticales secondaires -->
+        <line x1="160" y1="60" x2="160" y2="300"/><line x1="220" y1="100" x2="220" y2="200"/>
+        <line x1="360" y1="150" x2="360" y2="340"/><line x1="440" y1="240" x2="440" y2="400"/>
+        <!-- Via points (noeuds) -->
+        <circle cx="250" cy="80" r="4" fill="#ffffff"/>
+        <circle cx="320" cy="140" r="4" fill="#ffffff"/>
+        <circle cx="380" cy="200" r="4" fill="#ffffff"/>
+        <circle cx="280" cy="260" r="4" fill="#ffffff"/>
+        <circle cx="420" cy="320" r="4" fill="#ffffff"/>
+        <circle cx="160" cy="140" r="3" fill="#ffffff"/>
+        <circle cx="160" cy="260" r="3" fill="#ffffff"/>
+        <circle cx="220" cy="200" r="3" fill="#ffffff"/>
+        <!-- Composants schématiques -->
+        <rect x="200" y="170" width="40" height="22" rx="3" stroke="#ffffff" stroke-width="1.5"/>
+        <rect x="300" y="240" width="30" height="18" rx="3" stroke="#ffffff" stroke-width="1.5"/>
+        <rect x="130" y="290" width="36" height="20" rx="3" stroke="#ffffff" stroke-width="1.5"/>
+        <!-- Résistances stylisées -->
+        <path d="M50 200 h20 l5-8 l10 16 l10-16 l10 16 l5-8 h20" stroke="#ffffff" stroke-width="1.2" fill="none"/>
+        <path d="M60 320 h20 l5-8 l10 16 l10-16 l10 16 l5-8 h20" stroke="#ffffff" stroke-width="1.2" fill="none"/>
+      </g>
+    </svg>
+
+    <!-- Circuit board traces — gauche bas -->
+    <svg class="deco-circuit-bl" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#ffffff" stroke-width="1.1">
+        <line x1="40" y1="100" x2="200" y2="100"/><line x1="200" y1="100" x2="200" y2="160"/>
+        <line x1="60" y1="160" x2="280" y2="160"/><line x1="280" y1="160" x2="280" y2="220"/>
+        <line x1="30" y1="220" x2="240" y2="220"/><line x1="240" y1="220" x2="240" y2="280"/>
+        <line x1="80" y1="280" x2="320" y2="280"/><line x1="320" y1="280" x2="320" y2="340"/>
+        <line x1="50" y1="340" x2="260" y2="340"/>
+        <line x1="130" y1="80" x2="130" y2="240"/><line x1="350" y1="180" x2="350" y2="360"/>
+        <circle cx="200" cy="100" r="4" fill="#ffffff"/>
+        <circle cx="280" cy="160" r="4" fill="#ffffff"/>
+        <circle cx="240" cy="220" r="4" fill="#ffffff"/>
+        <circle cx="320" cy="280" r="4" fill="#ffffff"/>
+        <circle cx="130" cy="160" r="3" fill="#ffffff"/>
+        <circle cx="130" cy="220" r="3" fill="#ffffff"/>
+        <rect x="170" y="130" width="30" height="18" rx="3" stroke="#ffffff" stroke-width="1.5"/>
+        <rect x="260" y="192" width="28" height="16" rx="3" stroke="#ffffff" stroke-width="1.5"/>
+        <path d="M40 280 h18 l5-7 l9 14 l9-14 l9 14 l5-7 h18" stroke="#ffffff" stroke-width="1.1" fill="none"/>
+      </g>
+    </svg>
+
+    <!-- CPU / Chip schématique — gauche milieu -->
+    <svg class="deco-chip" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#ffffff" stroke-width="1.3">
+        <!-- Corps du chip -->
+        <rect x="80" y="80" width="120" height="120" rx="8" stroke-width="2"/>
+        <!-- Grille interne -->
+        <line x1="100" y1="80" x2="100" y2="200"/><line x1="120" y1="80" x2="120" y2="200"/>
+        <line x1="140" y1="80" x2="140" y2="200"/><line x1="160" y1="80" x2="160" y2="200"/>
+        <line x1="80" y1="100" x2="200" y2="100"/><line x1="80" y1="120" x2="200" y2="120"/>
+        <line x1="80" y1="140" x2="200" y2="140"/><line x1="80" y1="160" x2="200" y2="160"/>
+        <!-- Pattes gauche -->
+        <line x1="40" y1="100" x2="80" y2="100"/><line x1="40" y1="116" x2="80" y2="116"/>
+        <line x1="40" y1="132" x2="80" y2="132"/><line x1="40" y1="148" x2="80" y2="148"/>
+        <line x1="40" y1="164" x2="80" y2="164"/><line x1="40" y1="180" x2="80" y2="180"/>
+        <!-- Pattes droite -->
+        <line x1="200" y1="100" x2="240" y2="100"/><line x1="200" y1="116" x2="240" y2="116"/>
+        <line x1="200" y1="132" x2="240" y2="132"/><line x1="200" y1="148" x2="240" y2="148"/>
+        <line x1="200" y1="164" x2="240" y2="164"/><line x1="200" y1="180" x2="240" y2="180"/>
+        <!-- Pattes haut -->
+        <line x1="100" y1="40" x2="100" y2="80"/><line x1="120" y1="40" x2="120" y2="80"/>
+        <line x1="140" y1="40" x2="140" y2="80"/><line x1="160" y1="40" x2="160" y2="80"/>
+        <line x1="180" y1="40" x2="180" y2="80"/>
+        <!-- Pattes bas -->
+        <line x1="100" y1="200" x2="100" y2="240"/><line x1="120" y1="200" x2="120" y2="240"/>
+        <line x1="140" y1="200" x2="140" y2="240"/><line x1="160" y1="200" x2="160" y2="240"/>
+        <line x1="180" y1="200" x2="180" y2="240"/>
+        <!-- Centre -->
+        <rect x="108" y="108" width="64" height="64" rx="4" stroke="#ffffff" stroke-width="1.5"/>
+        <circle cx="140" cy="140" r="12" stroke="#ffffff" stroke-width="1.5"/>
+        <circle cx="140" cy="140" r="5" fill="#ffffff" stroke="none"/>
+      </g>
+    </svg>
+
+    <!-- Lignes de code flottantes -->
+    <div class="sec-deco" style="overflow:visible;">
+      <span class="deco-code-line">const iot = await mqtt.connect('broker.industrial');</span>
+      <span class="deco-code-line">modbus.readHoldingRegisters(0, 10, callback);</span>
+      <span class="deco-code-line">websocket.emit('data', sensor.getRealtime());</span>
+      <span class="deco-code-line">docker compose up --build -d production;</span>
+    </div>
+
+    <!-- Hexagones flottants — droite -->
+    <svg class="deco-hex-group" viewBox="0 0 340 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#ffffff" stroke-width="1.2">
+        <!-- Rangée 1 -->
+        <polygon points="60,30 90,12 120,30 120,66 90,84 60,66"/>
+        <polygon points="140,30 170,12 200,30 200,66 170,84 140,66"/>
+        <polygon points="220,30 250,12 280,30 280,66 250,84 220,66"/>
+        <!-- Rangée 2 -->
+        <polygon points="100,84 130,66 160,84 160,120 130,138 100,120"/>
+        <polygon points="180,84 210,66 240,84 240,120 210,138 180,120"/>
+        <!-- Rangée 3 -->
+        <polygon points="60,138 90,120 120,138 120,174 90,192 60,174"/>
+        <polygon points="140,138 170,120 200,138 200,174 170,192 140,174"/>
+        <polygon points="220,138 250,120 280,138 280,174 250,192 220,174"/>
+        <!-- Rangée 4 -->
+        <polygon points="100,192 130,174 160,192 160,228 130,246 100,228"/>
+        <polygon points="180,192 210,174 240,192 240,228 210,246 180,228"/>
+        <!-- Rangée 5 -->
+        <polygon points="60,246 90,228 120,246 120,282 90,300 60,282"/>
+        <polygon points="140,246 170,228 200,246 200,282 170,300 140,282"/>
+        <polygon points="220,246 250,228 280,246 280,282 250,300 220,282"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="hero-inner hero-hud-layout">
+
+      <!-- ── En-tête Centré du Héro ── -->
+      <div class="hero-header-center">
+        <div class="hero-available g-pill">
+          <span class="pulse-dot"></span>
+          Disponible pour projets industriels &amp; missions web
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-name-underlined">Dr Remus</span><br>
+          <span class="grad-text">Technicien en Automatisme &amp; Développeur Full-Stack</span>
+        </h1>
+        <p class="hero-lead">
+          Je transforme des problématiques réelles en applications, plateformes et systèmes intelligents grâce au développement logiciel, à l’IA et aux technologies connectées.
+        </p>
+      </div>
+
+      <!-- ── Scène HUD Connectée (PC au Centre + Textes Dispersés Connectés) ── -->
+      <div class="hero-hud-stage">
+
+        <!-- Overlay SVG de Connexions Dynamiques Vers l'Écran du PC -->
+        <svg class="hud-svg-overlay" id="hudSvgOverlay" aria-hidden="true">
+          <defs>
+            <filter id="hudGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="3.5" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            <linearGradient id="hudGradL" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+              <stop offset="70%" stop-color="#ffffff" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+            </linearGradient>
+            <linearGradient id="hudGradR" x1="100%" y1="0%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+              <stop offset="70%" stop-color="#ffffff" stop-opacity="0.85"/>
+              <stop offset="100%" stop-color="#ffffff" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Guides de câblage fixes d'arrière-plan -->
+          <path id="hudGuideL1" class="hud-wire-guide" />
+          <path id="hudGuideL2" class="hud-wire-guide" />
+          <path id="hudGuideR1" class="hud-wire-guide" />
+          <path id="hudGuideR2" class="hud-wire-guide" />
+
+          <!-- Câbles supraconducteurs actifs avec pulsation laser -->
+          <path id="hudWireL1" class="hud-wire-active hud-wire-active--left" filter="url(#hudGlow)" />
+          <path id="hudWireL2" class="hud-wire-active hud-wire-active--left" filter="url(#hudGlow)" />
+          <path id="hudWireR1" class="hud-wire-active hud-wire-active--right" filter="url(#hudGlow)" />
+          <path id="hudWireR2" class="hud-wire-active hud-wire-active--right" filter="url(#hudGlow)" />
+
+          <!-- Nœuds de jonction sur les cartes HUD -->
+          <circle id="hudDotCardL1" class="hud-node-dot hud-node-dot--card" r="4" />
+          <circle id="hudDotCardL2" class="hud-node-dot hud-node-dot--card" r="4" />
+          <circle id="hudDotCardR1" class="hud-node-dot hud-node-dot--card" r="4" />
+          <circle id="hudDotCardR2" class="hud-node-dot hud-node-dot--card" r="4" />
+
+          <!-- Nœuds de jonction lumineux sur le cadre de l'ordinateur -->
+          <circle id="hudDotLapL1" class="hud-node-dot hud-node-dot--laptop" r="5.5" />
+          <circle id="hudDotLapL2" class="hud-node-dot hud-node-dot--laptop" r="5.5" />
+          <circle id="hudDotLapR1" class="hud-node-dot hud-node-dot--laptop" r="5.5" />
+          <circle id="hudDotLapR2" class="hud-node-dot hud-node-dot--laptop" r="5.5" />
+        </svg>
+
+        <!-- Colonne Gauche : Cartes Connectées -->
+        <div class="hud-col hud-col--left">
+
+          <!-- Carte L1 : Automatisme -->
+          <div class="hud-card hud-card--l1">
+            <div class="hud-card-header">
+              <span class="hud-node-tag">NODE_01 // INDUSTRIE</span>
+              <span class="hud-status-dot"></span>
+            </div>
+            <h3 class="hud-card-title">Automatisme &amp; Terrain</h3>
+            <p class="hud-card-desc">Notions de base en automatisme, capteurs, supervision et communication entre équipements.</p>
+            <div class="hud-tech-row">
+              <span class="hud-tech-tag"><img src="https://cdn.simpleicons.org/mqtt/ffffff" alt="MQTT"> MQTT</span>
+              <span class="hud-tech-tag"><img src="https://cdn.simpleicons.org/raspberrypi/ffffff" alt="Raspberry"> Capteurs</span>
+            </div>
+          </div>
+
+          <!-- Carte L2 : Formation -->
+          <div class="hud-card hud-card--l2">
+            <div class="hud-card-header">
+              <span class="hud-node-tag">NODE_02 // FORMATION</span>
+              <span class="hud-status-dot"></span>
+            </div>
+            <h3 class="hud-card-title">Formation &amp; Transmission</h3>
+            <p class="hud-card-desc">Accompagnement, partage de connaissances et pédagogie autour du numérique et du développement.</p>
+            <div class="hud-tech-row">
+              <span class="hud-tech-tag"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg> Pédagogie</span>
+              <span class="hud-tech-tag"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Accompagnement</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Centre : Ordinateur Portable Haut & Centré -->
+        <div class="hud-center-laptop">
+          <div class="laptop-halo" aria-hidden="true"></div>
+
+          <!-- Laptop Mockup -->
+          <div class="laptop-mockup">
+            <!-- Screen Lid -->
+            <div class="laptop-lid">
+              <div class="laptop-camera"></div>
+              <div class="laptop-screen">
+                <!-- Screen Titlebar -->
+                <div class="laptop-bar">
+                  <div class="laptop-dots">
+                    <span class="l-dot"></span>
+                    <span class="l-dot"></span>
+                    <span class="l-dot"></span>
+                  </div>
+                  <div class="laptop-title">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    <span class="laptop-title-txt">dr-remus@workstation: ~/central-hub</span>
+                  </div>
+                  <div class="laptop-status">
+                    <span class="pulse-dot"></span>
+                    SYSTEM ONLINE
+                  </div>
+                </div>
+
+                <!-- Screen Viewport with profil-pro.jpg -->
+                <div class="laptop-viewport">
+                  <div class="laptop-bg-grid" aria-hidden="true"></div>
+                  <div class="laptop-telemetry-left" aria-hidden="true">
+                    <span>SYS: OPTIMAL</span>
+                    <span>SCADA &amp; IIoT</span>
+                  </div>
+                  <div class="laptop-telemetry-right" aria-hidden="true">
+                    <span>FPS: 60</span>
+                    <span>OPC-UA: OK</span>
+                  </div>
+
+                  <!-- Profil image on screen -->
+                  <div class="laptop-photo-container">
+                    <img src="profil-pro.jpg" alt="Dr Remus sur l'écran d'ordinateur" class="laptop-photo-img" width="1024" height="1024">
+                  </div>
+
+                  <!-- CRT TV Analog Scanlines & Power Beam Flash -->
+                  <div class="laptop-crt-scanlines" aria-hidden="true"></div>
+                  <div class="laptop-crt-flash" aria-hidden="true"></div>
+
+                  <!-- Diagonal glass reflection -->
+                  <div class="laptop-glare" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Base / Keyboard Deck -->
+            <div class="laptop-base">
+              <div class="laptop-base-top">
+                <div class="laptop-notch"></div>
+              </div>
+              <div class="laptop-base-bottom"></div>
+            </div>
+
+            <!-- Contact Shadow -->
+            <div class="laptop-shadow" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <!-- Colonne Droite : Cartes Connectées -->
+        <div class="hud-col hud-col--right">
+
+          <!-- Carte R1 : Web Fullstack -->
+          <div class="hud-card hud-card--r1">
+            <div class="hud-card-header">
+              <span class="hud-node-tag">NODE_03 // FULLSTACK</span>
+              <span class="hud-status-dot"></span>
+            </div>
+            <h3 class="hud-card-title">Développement Web</h3>
+            <p class="hud-card-desc">Applications web modernes, dashboards temps réel réactifs et APIs REST / WebSockets.</p>
+            <div class="hud-tech-row">
+              <span class="hud-tech-tag"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React"> React</span>
+              <span class="hud-tech-tag"><img src="https://cdn.simpleicons.org/nodedotjs/ffffff" alt="Node.js"> Node.js</span>
+              <span class="hud-tech-tag"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python"> Python</span>
+            </div>
+          </div>
+
+          <!-- Carte R2 : Actions & Collaboration -->
+          <div class="hud-card hud-card--r2">
+            <div class="hud-card-header">
+              <span class="hud-node-tag">NODE_04 // ACTIONS</span>
+              <span class="hud-status-dot"></span>
+            </div>
+            <h3 class="hud-card-title">Démarrer un Projet</h3>
+            <p class="hud-card-desc">Disponible pour missions industrielles et développements web sur mesure.</p>
+            <div class="hud-actions-row">
+              <a href="#projets" class="btn btn-primary btn-sm">
+                Projets
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="#contact" class="btn btn-glass btn-sm">
+                Contact
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-card g-card">
+          <div class="stat-val">Terrain + Web</div>
+          <div class="stat-key">Double expertise matériel &amp; logiciel</div>
+        </div>
+        <div class="stat-card g-card">
+          <div class="stat-val">Temps Réel</div>
+          <div class="stat-key">Acquisition &amp; télémétrie continue</div>
+        </div>
+        <div class="stat-card g-card">
+          <div class="stat-val">Industrie 4.0</div>
+          <div class="stat-key">Modernisation &amp; digitalisation d'usines</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     À PROPOS
+═══════════════════════════════════════════════════════════════ -->
+<section id="a-propos">
+
+  <!-- ── Décors de fond À PROPOS : cercles concentriques + formes géo ── -->
+  <div class="sec-deco" aria-hidden="true">
+    <div class="sec-separator top"></div>
+
+    <!-- Cercles concentriques — haut gauche -->
+    <svg class="deco-geo-tl" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#ffffff">
+        <circle cx="190" cy="190" r="160" stroke-width=".8" opacity=".6"/>
+        <circle cx="190" cy="190" r="130" stroke-width=".8" opacity=".5"/>
+        <circle cx="190" cy="190" r="100" stroke-width=".8" opacity=".4"/>
+        <circle cx="190" cy="190" r="70"  stroke-width=".8" opacity=".35"/>
+        <circle cx="190" cy="190" r="40"  stroke-width=".8" opacity=".3"/>
+        <!-- Lignes en étoile -->
+        <line x1="190" y1="30" x2="190" y2="350" stroke-width=".5" opacity=".3"/>
+        <line x1="30" y1="190" x2="350" y2="190" stroke-width=".5" opacity=".3"/>
+        <line x1="77" y1="77" x2="303" y2="303" stroke-width=".5" opacity=".2"/>
+        <line x1="303" y1="77" x2="77" y2="303" stroke-width=".5" opacity=".2"/>
+      </g>
+    </svg>
+
+    <!-- Triangle & formes géométriques — bas droite -->
+    <svg class="deco-geo-br" viewBox="0 0 440 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#ffffff" stroke-width="1">
+        <!-- Grand triangle -->
+        <polygon points="220,20 420,380 20,380" opacity=".5"/>
+        <!-- Triangle intérieur -->
+        <polygon points="220,80 380,360 60,360" opacity=".35"/>
+        <!-- Triangle innermost -->
+        <polygon points="220,140 340,340 100,340" opacity=".25"/>
+        <!-- Carré rotatif -->
+        <rect x="140" y="140" width="160" height="160" transform="rotate(15 220 220)" opacity=".3"/>
+        <rect x="160" y="160" width="120" height="120" transform="rotate(30 220 220)" opacity=".2"/>
+        <!-- Point central -->
+        <circle cx="220" cy="220" r="6" fill="#ffffff" opacity=".4" stroke="none"/>
+        <circle cx="220" cy="220" r="14" opacity=".2"/>
+        <circle cx="220" cy="220" r="24" opacity=".12"/>
+      </g>
+    </svg>
+
+    <div class="sec-separator bottom"></div>
+  </div>
+
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-pill">Profil &amp; Vision</span>
+      <h2 class="sec-title">Pas un profil générique.<br>Un parcours concret.</h2>
+      <p class="sec-desc">Ingénieur formé sur le terrain, je construis des systèmes qui tiennent la charge — pas des slides PowerPoint.</p>
+    </div>
+
+    <div class="about-grid">
+      <!-- Bloc texte principal -->
+      <div class="about-card g-card">
+
+        <div class="about-bio-header">
+          <div class="about-bio-tag">// QUI JE SUIS &amp; LEADERSHIP</div>
+        </div>
+
+        <p>Je m'appelle <strong>Remus</strong>. Développeur Full-Stack, technicien en automatisme et formateur, je suis également <strong>CEO de <a href="https://devvorx.com" target="_blank" rel="noopener" class="inline-company-link">DevVorx ↗</a></strong> et <strong>CEO &amp; Co-founder de Habigoo</strong>.</p>
+
+        <p>J'aime transformer des idées, des besoins ou des problèmes concrets en solutions numériques simples, utiles et bien pensées.</p>
+
+        <p>Mon parcours en informatique industrielle m'a amené à m'intéresser aux systèmes connectés, aux données et à la manière dont les technologies peuvent communiquer entre elles. En parallèle, le développement web m'a permis d'aller plus loin dans la conception d'applications, d'API et d'interfaces accessibles et modernes.</p>
+
+        <p>Je ne prétends pas tout maîtriser. J'apprends constamment, j'expérimente et je construis. C'est cette curiosité qui me permet de progresser et de transformer chaque projet en nouvelle expérience.</p>
+
+        <!-- Cartes Leadership & Entreprises -->
+        <div class="about-ventures-grid">
+          <a href="https://devvorx.com" target="_blank" rel="noopener" class="venture-card venture-card--link" title="Visiter devvorx.com">
+            <div class="venture-header">
+              <span class="venture-role-badge">CEO &amp; FOUNDER</span>
+              <span class="venture-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span>
+            </div>
+            <div class="venture-title">DevVorx</div>
+            <div class="venture-desc">Solutions logicielles, SaaS &amp; ingénierie web sur mesure</div>
+            <div class="venture-link-label">devvorx.com ➔</div>
+          </a>
+
+          <div class="venture-card">
+            <div class="venture-header">
+              <span class="venture-role-badge">CEO &amp; CO-FOUNDER</span>
+            </div>
+            <div class="venture-title">Habigoo</div>
+            <div class="venture-desc">Plateforme technologique connectée &amp; services innovants</div>
+            <div class="venture-status-label">Startup &amp; Co-fondation</div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="about-stats-row">
+          <div class="about-stat">
+            <span class="about-stat-num">Dev</span>
+            <span class="about-stat-label">Applications<br>&amp; outils numériques</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">IoT</span>
+            <span class="about-stat-label">Systèmes<br>industriels</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-num">Form.</span>
+            <span class="about-stat-label">Formation<br>&amp; accompagnement</span>
+          </div>
+        </div>
+
+        <div class="about-quote">
+          <span class="about-quote-mark">"</span>
+          Mon objectif : créer des solutions utiles et continuer à apprendre tout en transmettant ce que je découvre.
+        </div>
+      </div>
+
+      <!-- Bloc droite : parcours + piliers -->
+      <div class="about-right-col">
+
+        <!-- Timeline parcours -->
+        <div class="about-timeline g-card">
+          <div class="about-bio-tag">// AUJOURD'HUI</div>
+          <div class="timeline-list">
+            <div class="tl-item">
+              <div class="tl-dot tl-dot--highlight"></div>
+              <div class="tl-content">
+                <span class="tl-year">Leadership &amp; Direction</span>
+                <strong>CEO DevVorx · CEO &amp; Co-founder Habigoo</strong>
+                <p>Pilotage stratégique, architecture logicielle et création de valeur numérique</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <span class="tl-year">Développer</span>
+                <strong>Applications &amp; outils numériques</strong>
+                <p>Applications web, APIs, interfaces accessibles et modernes</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-content">
+                <span class="tl-year">Comprendre</span>
+                <strong>Systèmes industriels &amp; IoT</strong>
+                <p>Technologies connectées, données, communication entre systèmes</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot tl-dot--dim"></div>
+              <div class="tl-content">
+                <span class="tl-year">Transmettre</span>
+                <strong>Formation &amp; accompagnement</strong>
+                <p>Partager les connaissances, accompagner, faire progresser</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 piliers -->
+        <div class="pillars" data-stagger=".12">
+          <div class="pillar g-card">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22" opacity=".4"/></svg>
+            </div>
+            <div>
+              <h4>Développement web &amp; API</h4>
+              <p>Applications web réactives, APIs REST, interfaces modernes — de la maquette à la mise en production.</p>
+            </div>
+          </div>
+          <div class="pillar g-card">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polyline points="6 9 9 12 12 9 16 13"/><circle cx="19" cy="8" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </div>
+            <div>
+              <h4>Informatique industrielle &amp; IoT</h4>
+              <p>Systèmes connectés, données machine, supervision — comprendre ce qui se passe avant de l'afficher.</p>
+            </div>
+          </div>
+          <div class="pillar g-card">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <h4>Formation &amp; transmission</h4>
+              <p>Partager ce que j'apprends, expliquer clairement, rendre les concepts accessibles à tous.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     COMPÉTENCES
+═══════════════════════════════════════════════════════════════ -->
+<section id="competences">
+
+  <!-- ── Décors de fond COMPÉTENCES : grilles de points ── -->
+  <div class="sec-deco" aria-hidden="true">
+    <div class="sec-separator top"></div>
+
+    <!-- Grille de points — haut droite -->
+    <svg class="deco-dots-tr" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#ffffff">
+        <!-- Matrice de points 9×9 -->
+        <circle cx="20"  cy="20"  r="2.2"/><circle cx="60"  cy="20"  r="2.2"/><circle cx="100" cy="20"  r="2.2"/><circle cx="140" cy="20"  r="2.2"/><circle cx="180" cy="20"  r="2.2"/><circle cx="220" cy="20"  r="2.2"/><circle cx="260" cy="20"  r="2.2"/><circle cx="300" cy="20"  r="2.2"/><circle cx="340" cy="20"  r="2.2"/>
+        <circle cx="20"  cy="60"  r="2.2"/><circle cx="60"  cy="60"  r="2.2"/><circle cx="100" cy="60"  r="2.2"/><circle cx="140" cy="60"  r="2.2"/><circle cx="180" cy="60"  r="2.2"/><circle cx="220" cy="60"  r="2.2"/><circle cx="260" cy="60"  r="2.2"/><circle cx="300" cy="60"  r="2.2"/><circle cx="340" cy="60"  r="2.2"/>
+        <circle cx="20"  cy="100" r="2.2"/><circle cx="60"  cy="100" r="2.2"/><circle cx="100" cy="100" r="2.2"/><circle cx="140" cy="100" r="2.2"/><circle cx="180" cy="100" r="2.2"/><circle cx="220" cy="100" r="2.2"/><circle cx="260" cy="100" r="2.2"/><circle cx="300" cy="100" r="2.2"/><circle cx="340" cy="100" r="2.2"/>
+        <circle cx="20"  cy="140" r="2.2"/><circle cx="60"  cy="140" r="2.2"/><circle cx="100" cy="140" r="2.2"/><circle cx="140" cy="140" r="2.2"/><circle cx="180" cy="140" r="2.2"/><circle cx="220" cy="140" r="2.2"/><circle cx="260" cy="140" r="2.2"/><circle cx="300" cy="140" r="2.2"/><circle cx="340" cy="140" r="2.2"/>
+        <circle cx="20"  cy="180" r="2.2"/><circle cx="60"  cy="180" r="2.2"/><circle cx="100" cy="180" r="2.2"/><circle cx="140" cy="180" r="2.2"/><circle cx="180" cy="180" r="2.2"/><circle cx="220" cy="180" r="2.2"/><circle cx="260" cy="180" r="2.2"/><circle cx="300" cy="180" r="2.2"/><circle cx="340" cy="180" r="2.2"/>
+        <circle cx="20"  cy="220" r="2.2"/><circle cx="60"  cy="220" r="2.2"/><circle cx="100" cy="220" r="2.2"/><circle cx="140" cy="220" r="2.2"/><circle cx="180" cy="220" r="2.2"/><circle cx="220" cy="220" r="2.2"/><circle cx="260" cy="220" r="2.2"/><circle cx="300" cy="220" r="2.2"/><circle cx="340" cy="220" r="2.2"/>
+        <circle cx="20"  cy="260" r="2.2"/><circle cx="60"  cy="260" r="2.2"/><circle cx="100" cy="260" r="2.2"/><circle cx="140" cy="260" r="2.2"/><circle cx="180" cy="260" r="2.2"/><circle cx="220" cy="260" r="2.2"/><circle cx="260" cy="260" r="2.2"/><circle cx="300" cy="260" r="2.2"/><circle cx="340" cy="260" r="2.2"/>
+        <circle cx="20"  cy="300" r="2.2"/><circle cx="60"  cy="300" r="2.2"/><circle cx="100" cy="300" r="2.2"/><circle cx="140" cy="300" r="2.2"/><circle cx="180" cy="300" r="2.2"/><circle cx="220" cy="300" r="2.2"/><circle cx="260" cy="300" r="2.2"/><circle cx="300" cy="300" r="2.2"/><circle cx="340" cy="300" r="2.2"/>
+        <circle cx="20"  cy="340" r="2.2"/><circle cx="60"  cy="340" r="2.2"/><circle cx="100" cy="340" r="2.2"/><circle cx="140" cy="340" r="2.2"/><circle cx="180" cy="340" r="2.2"/><circle cx="220" cy="340" r="2.2"/><circle cx="260" cy="340" r="2.2"/><circle cx="300" cy="340" r="2.2"/><circle cx="340" cy="340" r="2.2"/>
+      </g>
+    </svg>
+
+    <!-- Grille de points — bas gauche (indigo) -->
+    <svg class="deco-dots-bl" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g fill="#ffffff">
+        <circle cx="20"  cy="20"  r="2"/><circle cx="56"  cy="20"  r="2"/><circle cx="92"  cy="20"  r="2"/><circle cx="128" cy="20"  r="2"/><circle cx="164" cy="20"  r="2"/><circle cx="200" cy="20"  r="2"/><circle cx="236" cy="20"  r="2"/><circle cx="272" cy="20"  r="2"/>
+        <circle cx="20"  cy="56"  r="2"/><circle cx="56"  cy="56"  r="2"/><circle cx="92"  cy="56"  r="2"/><circle cx="128" cy="56"  r="2"/><circle cx="164" cy="56"  r="2"/><circle cx="200" cy="56"  r="2"/><circle cx="236" cy="56"  r="2"/><circle cx="272" cy="56"  r="2"/>
+        <circle cx="20"  cy="92"  r="2"/><circle cx="56"  cy="92"  r="2"/><circle cx="92"  cy="92"  r="2"/><circle cx="128" cy="92"  r="2"/><circle cx="164" cy="92"  r="2"/><circle cx="200" cy="92"  r="2"/><circle cx="236" cy="92"  r="2"/><circle cx="272" cy="92"  r="2"/>
+        <circle cx="20"  cy="128" r="2"/><circle cx="56"  cy="128" r="2"/><circle cx="92"  cy="128" r="2"/><circle cx="128" cy="128" r="2"/><circle cx="164" cy="128" r="2"/><circle cx="200" cy="128" r="2"/><circle cx="236" cy="128" r="2"/><circle cx="272" cy="128" r="2"/>
+        <circle cx="20"  cy="164" r="2"/><circle cx="56"  cy="164" r="2"/><circle cx="92"  cy="164" r="2"/><circle cx="128" cy="164" r="2"/><circle cx="164" cy="164" r="2"/><circle cx="200" cy="164" r="2"/><circle cx="236" cy="164" r="2"/><circle cx="272" cy="164" r="2"/>
+        <circle cx="20"  cy="200" r="2"/><circle cx="56"  cy="200" r="2"/><circle cx="92"  cy="200" r="2"/><circle cx="128" cy="200" r="2"/><circle cx="164" cy="200" r="2"/><circle cx="200" cy="200" r="2"/><circle cx="236" cy="200" r="2"/><circle cx="272" cy="200" r="2"/>
+        <circle cx="20"  cy="236" r="2"/><circle cx="56"  cy="236" r="2"/><circle cx="92"  cy="236" r="2"/><circle cx="128" cy="236" r="2"/><circle cx="164" cy="236" r="2"/><circle cx="200" cy="236" r="2"/><circle cx="236" cy="236" r="2"/><circle cx="272" cy="236" r="2"/>
+        <circle cx="20"  cy="272" r="2"/><circle cx="56"  cy="272" r="2"/><circle cx="92"  cy="272" r="2"/><circle cx="128" cy="272" r="2"/><circle cx="164" cy="272" r="2"/><circle cx="200" cy="272" r="2"/><circle cx="236" cy="272" r="2"/><circle cx="272" cy="272" r="2"/>
+      </g>
+    </svg>
+
+    <div class="sec-separator bottom"></div>
+  </div>
+
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-pill">Expertises</span>
+      <h2 class="sec-title">Une boîte à outils complète</h2>
+      <p class="sec-desc">Des protocoles industriels de bas niveau aux frameworks web les plus avancés.</p>
+    </div>
+    <div class="skills-cols">
+
+      <div class="skill-col g-card">
+        <div class="skill-col-head">
+          <div class="skill-col-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 2H8l-2 5h12z"/><line x1="12" y1="12" x2="12" y2="17"/><line x1="9.5" y1="14.5" x2="14.5" y2="14.5"/></svg></div>
+          <span class="skill-col-title">Informatique Industrielle &amp; IoT</span>
+        </div>
+        <div class="skill-list">
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/mqtt/ffffff" alt="MQTT"></div><span class="skill-label">MQTT &amp; IoT Broker</span><span class="skill-tag">IoT Core</span></div>
+          <div class="skill-row"><div class="skill-logo"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ffffff" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/><line x1="14" y1="10" x2="14" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg></div><span class="skill-label">Modbus TCP / RTU</span><span class="skill-tag">Terrain</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/cplusplus/ffffff" alt="C++"></div><span class="skill-label">C++ embarqué</span><span class="skill-tag">Embarqué</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/raspberrypi/ffffff" alt="Raspberry Pi"></div><span class="skill-label">Raspberry Pi / ESP32</span><span class="skill-tag">Embarqué</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/influxdb/ffffff" alt="InfluxDB"></div><span class="skill-label">InfluxDB / Séries temporelles</span><span class="skill-tag">Timeseries</span></div>
+        </div>
+      </div>
+
+      <div class="skill-col g-card">
+        <div class="skill-col-head">
+          <div class="skill-col-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          <span class="skill-col-title">Développement Web Fullstack</span>
+        </div>
+        <div class="skill-list">
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JavaScript"></div><span class="skill-label">JavaScript / TypeScript</span><span class="skill-tag">Langage</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React"></div><span class="skill-label">React.js</span><span class="skill-tag">UI / SPA</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/nodedotjs/ffffff" alt="Node.js"></div><span class="skill-label">Node.js &amp; Express</span><span class="skill-tag">Backend</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python"></div><span class="skill-label">Python (Django / FastAPI)</span><span class="skill-tag">APIs &amp; Data</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PostgreSQL"></div><span class="skill-label">PostgreSQL / MySQL</span><span class="skill-tag">Database</span></div>
+          <div class="skill-row"><div class="skill-logo"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ffffff" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div><span class="skill-label">REST API &amp; WebSockets</span><span class="skill-tag">Streaming</span></div>
+        </div>
+      </div>
+
+      <div class="skill-col g-card">
+        <div class="skill-col-head">
+          <div class="skill-col-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <span class="skill-col-title">DevOps &amp; Environnements</span>
+        </div>
+        <div class="skill-list">
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/docker/ffffff" alt="Docker"></div><span class="skill-label">Docker &amp; Conteneurisation</span><span class="skill-tag">DevOps</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/linux/ffffff" alt="Linux"></div><span class="skill-label">Linux &amp; Shell scripting</span><span class="skill-tag">Système</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/grafana/ffffff" alt="Grafana"></div><span class="skill-label">Grafana &amp; Monitoring</span><span class="skill-tag">Dashboards</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/git/ffffff" alt="Git"></div><span class="skill-label">Git &amp; GitHub</span><span class="skill-tag">Versioning</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/nginx/ffffff" alt="NGINX"></div><span class="skill-label">NGINX &amp; Reverse proxy</span><span class="skill-tag">Infra</span></div>
+          <div class="skill-row"><div class="skill-logo"><img src="https://cdn.simpleicons.org/redis/ffffff" alt="Redis"></div><span class="skill-label">Redis &amp; Cache</span><span class="skill-tag">Perf.</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PROJETS — Sticky Card Stack
+═══════════════════════════════════════════════════════════════ -->
+<section id="projets" class="proj-stack-section">
+
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-pill">Réalisations</span>
+      <h2 class="sec-title">Projets &amp; Cas d'usage</h2>
+      <p class="sec-desc">Faites défiler pour explorer chaque projet. 12 réalisations couvrant industrie, SaaS, IA, santé, événementiel et développement web.</p>
+    </div>
+  </div>
+
+  <!-- Card Stack -->
+  <div class="card-stack" id="portfolioCardStack">
+
+    <!-- ── Carte 1 : SCADA Temps Réel ── -->
+    <div class="card-stack__item cs--1">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">SCADA &amp; IoT</span>
+            <h3 class="cs-title">Plateforme Web SCADA Temps Réel</h3>
+            <p class="cs-desc">Application web de supervision industrielle avec monitoring en direct de 4 lignes de production, WebSockets, alertes automatiques et gestion des consignes machines.</p>
+            <div class="cs-links">
+              <a href="#" class="cs-link cs-link--primary" onclick="alert('Placeholder démo'); return false;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Voir la démo
+              </a>
+              <a href="#" class="cs-link" onclick="alert('Placeholder GitHub'); return false;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                Code source
+              </a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React"> React</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/nodedotjs/ffffff" alt="Node.js"> Node.js</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/mqtt/ffffff" alt="MQTT"> MQTT</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/influxdb/ffffff" alt="InfluxDB"> InfluxDB</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/docker/ffffff" alt="Docker"> Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <!-- Preview schématique SCADA -->
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Barre de titre simulée -->
+            <rect x="20" y="16" width="760" height="32" rx="6" fill="rgba(255,255,255,0.08)"/>
+            <circle cx="40" cy="32" r="7" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="62" cy="32" r="7" fill="rgba(255,255,255,0.15)"/>
+            <circle cx="84" cy="32" r="7" fill="rgba(255,255,255,0.1)"/>
+            <rect x="110" y="24" width="120" height="16" rx="4" fill="rgba(255,255,255,0.15)"/>
+            <!-- 4 widgets KPI -->
+            <rect x="20" y="64" width="170" height="70" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+            <rect x="210" y="64" width="170" height="70" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+            <rect x="400" y="64" width="170" height="70" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+            <rect x="590" y="64" width="190" height="70" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+            <!-- Textes KPI -->
+            <rect x="36" y="80" width="60" height="10" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <rect x="36" y="100" width="80" height="18" rx="4" fill="rgba(255,255,255,0.45)"/>
+            <rect x="226" y="80" width="60" height="10" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="226" y="100" width="70" height="18" rx="4" fill="rgba(255,255,255,0.35)"/>
+            <!-- Courbe de signal temps réel -->
+            <rect x="20" y="148" width="760" height="56" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <polyline points="36,188 90,162 145,178 200,155 255,170 310,148 365,165 420,152 475,168 530,155 585,172 640,158 695,175 750,160 764,168" stroke="rgba(255,255,255,0.75)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="310" cy="148" r="4" fill="rgba(255,255,255,0.9)" stroke="none"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Carte 2 : Passerelle Modbus ── -->
+    <div class="card-stack__item cs--2">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">Passerelle Edge</span>
+            <h3 class="cs-title">Passerelle Modbus → Cloud &amp; Web UI</h3>
+            <p class="cs-desc">Module embarqué sur Raspberry Pi collectant des registres de capteurs industriels, avec interface de configuration web locale et synchronisation cloud chiffrée.</p>
+            <div class="cs-links">
+              <a href="#" class="cs-link cs-link--primary" onclick="alert('Placeholder démo'); return false;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Voir la démo</a>
+              <a href="#" class="cs-link" onclick="alert('Placeholder GitHub'); return false;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code source</a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python"> Python</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/fastapi/ffffff" alt="FastAPI"> FastAPI</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/docker/ffffff" alt="Docker"> Docker</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/sqlite/ffffff" alt="SQLite"> SQLite</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/raspberrypi/ffffff" alt="RPi"> Raspberry Pi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Schéma de flux Modbus → Edge → Cloud en palette du site -->
+            <!-- PLC/Capteur -->
+            <rect x="30" y="70" width="140" height="80" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+            <rect x="50" y="88" width="40" height="30" rx="4" fill="rgba(255,255,255,0.15)"/>
+            <rect x="100" y="92" width="50" height="8" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="100" y="106" width="40" height="8" rx="3" fill="rgba(255,255,255,0.18)"/>
+            <text x="100" y="138" font-size="10" fill="rgba(226,232,240,0.85)" font-family="monospace">PLC / Capteurs</text>
+            <!-- Flèche Modbus -->
+            <path d="M172 110 L240 110" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-dasharray="6,3"/>
+            <polygon points="240,106 252,110 240,114" fill="rgba(255,255,255,0.5)"/>
+            <text x="190" y="103" font-size="9" fill="rgba(96,165,250,0.85)" font-family="monospace">Modbus TCP</text>
+            <!-- Edge (Raspberry Pi) -->
+            <rect x="254" y="60" width="160" height="100" rx="10" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <circle cx="334" cy="84" r="18" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.35)" stroke-width="1"/>
+            <rect x="286" y="108" width="96" height="8" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <rect x="300" y="122" width="68" height="8" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <text x="298" y="148" font-size="10" fill="rgba(226,232,240,0.85)" font-family="monospace">Edge Gateway</text>
+            <!-- Flèche Cloud -->
+            <path d="M416 110 L484 110" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-dasharray="6,3"/>
+            <polygon points="484,106 496,110 484,114" fill="rgba(255,255,255,0.5)"/>
+            <text x="426" y="103" font-size="9" fill="rgba(96,165,250,0.85)" font-family="monospace">HTTPS/TLS</text>
+            <!-- Cloud -->
+            <ellipse cx="580" cy="100" rx="80" ry="45" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <rect x="540" y="88" width="80" height="24" rx="6" fill="rgba(255,255,255,0.18)"/>
+            <text x="556" y="104" font-size="10" fill="rgba(226,232,240,0.85)" font-family="monospace">FastAPI + DB</text>
+            <!-- Web UI -->
+            <path d="M660 100 L700 100" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+            <polygon points="700,96 712,100 700,104" fill="rgba(255,255,255,0.5)"/>
+            <rect x="714" y="72" width="62" height="56" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+            <rect x="722" y="82" width="46" height="8" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="722" y="96" width="36" height="8" rx="3" fill="rgba(255,255,255,0.18)"/>
+            <rect x="722" y="110" width="40" height="8" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <text x="720" y="140" font-size="9" fill="rgba(226,232,240,0.8)" font-family="monospace">Web UI</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Carte 3 : Maintenance Prédictive ── -->
+    <div class="card-stack__item cs--3">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">Maintenance 4.0</span>
+            <h3 class="cs-title">Dashboard de Maintenance Prédictive</h3>
+            <p class="cs-desc">Visualisation des vibrations et températures de moteurs industriels. Calcul automatique des seuils d'usure et génération de rapports prévisionnels.</p>
+            <div class="cs-links">
+              <a href="#" class="cs-link cs-link--primary" onclick="alert('Placeholder démo'); return false;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Voir la démo</a>
+              <a href="#" class="cs-link" onclick="alert('Placeholder GitHub'); return false;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code source</a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/grafana/ffffff" alt="Grafana"> Grafana</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/vuedotjs/ffffff" alt="Vue"> Vue.js</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PG"> PostgreSQL</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python"> Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Header du dashboard -->
+            <rect x="20" y="16" width="760" height="28" rx="5" fill="rgba(255,255,255,0.08)"/>
+            <rect x="36" y="24" width="100" height="12" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="640" y="24" width="80" height="12" rx="3" fill="rgba(255,255,255,0.15)"/>
+            <!-- Graphe vibrations -->
+            <rect x="20" y="54" width="470" height="110" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <rect x="36" y="64" width="80" height="10" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <!-- Signal vibrations -->
+            <polyline points="36,148 80,130 100,142 130,118 160,138 190,110 220,128 250,112 280,130 310,108 340,125 370,105 400,122 430,110 460,128 480,138" stroke="rgba(255,255,255,0.75)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Ligne seuil d'alerte -->
+            <line x1="36" y1="115" x2="480" y2="115" stroke="rgba(255,255,255,0.55)" stroke-width="1.5" stroke-dasharray="6,4"/>
+            <rect x="420" y="106" width="55" height="16" rx="4" fill="rgba(255,255,255,0.12)"/>
+            <text x="447" y="118" font-size="9" fill="#ffffff" font-family="monospace" text-anchor="middle">Seuil max</text>
+            <!-- Jauge température -->
+            <rect x="506" y="54" width="274" height="110" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <rect x="522" y="64" width="70" height="10" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <path d="M 593 148 A 60 60 0 0 1 753 148" stroke="rgba(255,255,255,0.12)" stroke-width="16" fill="none" stroke-linecap="round"/>
+            <path d="M 593 148 A 60 60 0 0 1 720 100" stroke="rgba(255,255,255,0.8)" stroke-width="16" fill="none" stroke-linecap="round"/>
+            <text x="673" y="146" font-size="22" fill="#ffffff" font-family="monospace" font-weight="bold" text-anchor="middle">72°C</text>
+            <!-- Barre footer -->
+            <rect x="20" y="174" width="760" height="28" rx="5" fill="rgba(255,255,255,0.05)"/>
+            <rect x="36" y="182" width="65" height="12" rx="3" fill="rgba(255,255,255,0.18)"/>
+            <rect x="115" y="182" width="65" height="12" rx="3" fill="rgba(255,255,255,0.25)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Carte 4 : MES / Traçabilité ── -->
+    <div class="card-stack__item cs--4">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">MES / Atelier</span>
+            <h3 class="cs-title">Système MES &amp; Traçabilité d'Atelier</h3>
+            <p class="cs-desc">Suivi des ordres de fabrication (OF), scan de codes-barres en temps réel, gestion d'inventaire et export automatisé vers ERP.</p>
+            <div class="cs-links">
+              <a href="#" class="cs-link cs-link--primary" onclick="alert('Placeholder démo'); return false;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Voir la démo</a>
+              <a href="#" class="cs-link" onclick="alert('Placeholder GitHub'); return false;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code source</a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React"> React</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/express/ffffff" alt="Express"> Express</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PG"> PostgreSQL</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/docker/ffffff" alt="Docker"> Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Interface MES table -->
+            <rect x="20" y="16" width="760" height="32" rx="6" fill="rgba(255,255,255,0.08)"/>
+            <rect x="36" y="24" width="120" height="16" rx="4" fill="rgba(255,255,255,0.25)"/>
+            <rect x="650" y="22" width="90" height="20" rx="6" fill="rgba(255,255,255,0.3)"/>
+            <!-- En-tête tableau -->
+            <rect x="20" y="58" width="760" height="28" rx="4" fill="rgba(255,255,255,0.12)"/>
+            <rect x="36" y="67" width="80" height="10" rx="3" fill="rgba(255,255,255,0.4)"/>
+            <rect x="200" y="67" width="80" height="10" rx="3" fill="rgba(255,255,255,0.35)"/>
+            <rect x="364" y="67" width="60" height="10" rx="3" fill="rgba(255,255,255,0.35)"/>
+            <rect x="520" y="67" width="80" height="10" rx="3" fill="rgba(255,255,255,0.35)"/>
+            <rect x="680" y="67" width="60" height="10" rx="3" fill="rgba(255,255,255,0.35)"/>
+            <!-- Lignes tableau -->
+            <rect x="20" y="94" width="760" height="26" rx="0" fill="rgba(255,255,255,0.06)"/>
+            <rect x="36" y="102" width="70" height="10" rx="3" fill="rgba(226,232,240,0.6)"/>
+            <rect x="200" y="102" width="90" height="10" rx="3" fill="rgba(226,232,240,0.45)"/>
+            <rect x="364" y="102" width="50" height="10" rx="3" fill="rgba(226,232,240,0.45)"/>
+            <rect x="510" y="99" width="70" height="16" rx="8" fill="rgba(255,255,255,0.2)"/>
+            <rect x="20" y="128" width="760" height="26" rx="0" fill="rgba(255,255,255,0.08)"/>
+            <rect x="36" y="136" width="80" height="10" rx="3" fill="rgba(226,232,240,0.6)"/>
+            <rect x="200" y="136" width="75" height="10" rx="3" fill="rgba(226,232,240,0.45)"/>
+            <rect x="364" y="136" width="55" height="10" rx="3" fill="rgba(226,232,240,0.45)"/>
+            <rect x="510" y="133" width="70" height="16" rx="8" fill="rgba(255,255,255,0.2)"/>
+            <rect x="20" y="162" width="760" height="26" rx="0" fill="rgba(255,255,255,0.06)"/>
+            <rect x="36" y="170" width="65" height="10" rx="3" fill="rgba(226,232,240,0.6)"/>
+            <rect x="200" y="170" width="85" height="10" rx="3" fill="rgba(226,232,240,0.45)"/>
+            <rect x="510" y="167" width="70" height="16" rx="8" fill="rgba(255,255,255,0.2)"/>
+            <!-- Code barre -->
+            <g transform="translate(660,96)">
+              <rect x="0" y="0" width="3" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="5" y="0" width="2" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="9" y="0" width="4" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="15" y="0" width="2" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="19" y="0" width="3" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="24" y="0" width="1" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="27" y="0" width="4" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="33" y="0" width="2" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="37" y="0" width="3" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="42" y="0" width="1" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="45" y="0" width="5" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="52" y="0" width="2" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="56" y="0" width="3" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="61" y="0" width="1" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="64" y="0" width="4" height="60" fill="rgba(226,232,240,0.55)"/>
+              <rect x="70" y="0" width="2" height="60" fill="rgba(226,232,240,0.55)"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Carte 5 : OPC-UA ── -->
+    <div class="card-stack__item cs--5">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">OPC-UA Server</span>
+            <h3 class="cs-title">Pont OPC-UA → Interface Web</h3>
+            <p class="cs-desc">Passerelle logicielle entre automates Siemens S7-1500 et une interface web moderne. Souscription aux tags critiques, historisation et restitution graphique sans latence.</p>
+            <div class="cs-links">
+              <a href="#" class="cs-link cs-link--primary" onclick="alert('Placeholder démo'); return false;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Voir la démo</a>
+              <a href="#" class="cs-link" onclick="alert('Placeholder GitHub'); return false;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code source</a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/nodedotjs/ffffff" alt="Node"> Node-OPCUA</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React"> React</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/redis/ffffff" alt="Redis"> Redis</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/siemens/ffffff" alt="Siemens"> Siemens S7</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Architecture OPC-UA tree + live tags -->
+            <!-- Arbre de noeuds OPC-UA -->
+            <rect x="20" y="16" width="240" height="190" rx="8" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <rect x="36" y="30" width="60" height="10" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <!-- Nodes -->
+            <circle cx="46" cy="62" r="6" fill="rgba(255,255,255,0.35)"/>
+            <rect x="58" y="57" width="80" height="10" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <line x1="46" y1="68" x2="46" y2="90" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <circle cx="60" cy="90" r="5" fill="rgba(255,255,255,0.25)"/>
+            <rect x="70" y="86" width="70" height="9" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <line x1="60" y1="95" x2="60" y2="115" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <circle cx="74" cy="115" r="4" fill="rgba(255,255,255,0.2)"/>
+            <rect x="82" y="111" width="65" height="9" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <line x1="46" y1="68" x2="46" y2="138" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <circle cx="60" cy="138" r="5" fill="rgba(255,255,255,0.25)"/>
+            <rect x="70" y="134" width="75" height="9" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <circle cx="74" cy="162" r="4" fill="rgba(255,255,255,0.2)"/>
+            <rect x="82" y="158" width="60" height="9" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <line x1="60" y1="143" x2="60" y2="162" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <!-- Flèche -->
+            <path d="M262 108 L296 108" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+            <polygon points="296,104 308,108 296,112" fill="rgba(255,255,255,0.4)"/>
+            <!-- Live tags panel -->
+            <rect x="310" y="16" width="470" height="190" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.16)" stroke-width="1"/>
+            <rect x="326" y="30" width="80" height="10" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <!-- Tag rows avec valeurs live -->
+            <rect x="326" y="54" width="438" height="26" rx="4" fill="rgba(255,255,255,0.08)"/>
+            <rect x="338" y="61" width="80" height="10" rx="3" fill="rgba(255,255,255,0.5)"/>
+            <rect x="570" y="59" width="60" height="14" rx="4" fill="rgba(255,255,255,0.2)"/>
+            <rect x="636" y="59" width="50" height="14" rx="8" fill="rgba(255,255,255,0.25)"/>
+            <rect x="326" y="86" width="438" height="26" rx="4" fill="rgba(255,255,255,0.05)"/>
+            <rect x="338" y="93" width="90" height="10" rx="3" fill="rgba(255,255,255,0.45)"/>
+            <rect x="570" y="91" width="60" height="14" rx="4" fill="rgba(255,255,255,0.2)"/>
+            <rect x="636" y="91" width="50" height="14" rx="8" fill="rgba(255,255,255,0.25)"/>
+            <rect x="326" y="118" width="438" height="26" rx="4" fill="rgba(255,255,255,0.08)"/>
+            <rect x="338" y="125" width="70" height="10" rx="3" fill="rgba(255,255,255,0.5)"/>
+            <rect x="570" y="123" width="60" height="14" rx="4" fill="rgba(255,255,255,0.25)"/>
+            <rect x="636" y="123" width="50" height="14" rx="8" fill="rgba(255,255,255,0.2)"/>
+            <rect x="326" y="150" width="438" height="26" rx="4" fill="rgba(255,255,255,0.05)"/>
+            <rect x="338" y="157" width="85" height="10" rx="3" fill="rgba(255,255,255,0.45)"/>
+            <rect x="570" y="155" width="60" height="14" rx="4" fill="rgba(255,255,255,0.2)"/>
+            <rect x="636" y="155" width="50" height="14" rx="8" fill="rgba(255,255,255,0.25)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Carte 6 : Portail Web Sécurisé ── -->
+    <div class="card-stack__item cs--6">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">Auth &amp; Micro-services</span>
+            <h3 class="cs-title">Portail Web Sécurisé &amp; API Modulaire</h3>
+            <p class="cs-desc">Plateforme d'entreprise avec authentification JWT/OAuth2, tableau de bord analytique, gestion des rôles et architecture micro-services conteneurisée.</p>
+            <div class="cs-links">
+              <a href="#" class="cs-link cs-link--primary" onclick="alert('Placeholder démo'); return false;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>Voir la démo</a>
+              <a href="#" class="cs-link" onclick="alert('Placeholder GitHub'); return false;"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code source</a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React"> React</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/typescript/ffffff" alt="TS"> TypeScript</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/fastapi/ffffff" alt="FastAPI"> FastAPI</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/redis/ffffff" alt="Redis"> Redis</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/docker/ffffff" alt="Docker"> Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Micro-services architecture diagram -->
+            <!-- Gateway -->
+            <rect x="20" y="80" width="110" height="60" rx="8" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <rect x="35" y="95" width="80" height="10" rx="3" fill="rgba(255,255,255,0.35)"/>
+            <rect x="45" y="111" width="60" height="9" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <text x="75" y="158" font-size="9" fill="rgba(255,255,255,0.6)" font-family="monospace" text-anchor="middle">API Gateway</text>
+            <!-- Flèches -->
+            <path d="M132 90 L175 75" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+            <path d="M132 110 L175 110" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+            <path d="M132 125 L175 145" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+            <!-- Auth service -->
+            <rect x="177" y="50" width="115" height="50" rx="7" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+            <rect x="192" y="64" width="70" height="9" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <rect x="202" y="78" width="50" height="9" rx="3" fill="rgba(255,255,255,0.18)"/>
+            <text x="234" y="115" font-size="9" fill="rgba(255,255,255,0.6)" font-family="monospace" text-anchor="middle">Auth / JWT</text>
+            <!-- Data service -->
+            <rect x="177" y="84" width="115" height="50" rx="7" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+            <rect x="192" y="98" width="80" height="9" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="202" y="112" width="55" height="9" rx="3" fill="rgba(255,255,255,0.16)"/>
+            <text x="234" y="148" font-size="9" fill="rgba(255,255,255,0.6)" font-family="monospace" text-anchor="middle">Data API</text>
+            <!-- User service -->
+            <rect x="177" y="118" width="115" height="50" rx="7" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+            <rect x="192" y="132" width="75" height="9" rx="3" fill="rgba(255,255,255,0.28)"/>
+            <rect x="202" y="146" width="50" height="9" rx="3" fill="rgba(255,255,255,0.18)"/>
+            <text x="234" y="182" font-size="9" fill="rgba(255,255,255,0.6)" font-family="monospace" text-anchor="middle">User RBAC</text>
+            <!-- DB Redis -->
+            <path d="M294 100 L340 100" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <ellipse cx="370" cy="100" rx="30" ry="18" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+            <ellipse cx="370" cy="94" rx="30" ry="8" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+            <text x="370" y="125" font-size="9" fill="rgba(255,255,255,0.6)" font-family="monospace" text-anchor="middle">Redis Cache</text>
+            <!-- PG -->
+            <path d="M294 130 L460 130" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <ellipse cx="490" cy="130" rx="30" ry="18" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+            <ellipse cx="490" cy="124" rx="30" ry="8" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.22)" stroke-width="1"/>
+            <text x="490" y="158" font-size="9" fill="rgba(255,255,255,0.6)" font-family="monospace" text-anchor="middle">PostgreSQL</text>
+            <!-- Docker / Deploy -->
+            <rect x="560" y="50" width="220" height="140" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.18)" stroke-width="1" stroke-dasharray="5,4"/>
+            <rect x="574" y="66" width="80" height="10" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <rect x="574" y="92" width="60" height="40" rx="5" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <rect x="644" y="92" width="60" height="40" rx="5" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <rect x="714" y="92" width="52" height="40" rx="5" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+            <rect x="574" y="148" width="192" height="28" rx="5" fill="rgba(255,255,255,0.08)"/>
+            <rect x="590" y="156" width="60" height="12" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <text x="668" y="44" font-size="9" fill="rgba(255,255,255,0.6)" font-family="monospace" text-anchor="middle">Docker Compose</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Carte 7 : XENFY — SaaS de gestion ── -->
+    <div class="card-stack__item cs--7">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">SaaS / Web / Business</span>
+            <h3 class="cs-title">XENFY — Plateforme SaaS de gestion</h3>
+            <p class="cs-desc">Plateforme de gestion tout-en-un pour petites entreprises : ventes, produits, stocks, dettes, personnel et utilisateurs. Intègre une IA capable d'effectuer des actions à la place de l'opérateur.</p>
+            <div class="cs-links">
+              <a href="https://xenfyapp.com" class="cs-link cs-link--primary" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                xenfyapp.com
+              </a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/php/ffffff" alt="PHP"> PHP</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/mysql/ffffff" alt="MySQL"> MySQL</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/javascript/ffffff" alt="JS"> JavaScript</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/bootstrap/ffffff" alt="Bootstrap"> Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <!-- Dashboard SaaS schématique -->
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Barre top app -->
+            <rect x="20" y="16" width="760" height="32" rx="6" fill="rgba(255,255,255,0.08)"/>
+            <rect x="36" y="24" width="90" height="16" rx="4" fill="rgba(255,255,255,0.2)"/>
+            <rect x="640" y="24" width="60" height="16" rx="4" fill="rgba(255,255,255,0.12)"/>
+            <rect x="710" y="24" width="56" height="16" rx="8" fill="rgba(255,255,255,0.18)"/>
+            <!-- Sidebar -->
+            <rect x="20" y="58" width="140" height="148" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <rect x="34" y="74" width="80" height="10" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="34" y="94" width="100" height="8" rx="3" fill="rgba(255,255,255,0.15)"/>
+            <rect x="34" y="112" width="90" height="8" rx="3" fill="rgba(255,255,255,0.1)"/>
+            <rect x="34" y="130" width="95" height="8" rx="3" fill="rgba(255,255,255,0.1)"/>
+            <rect x="34" y="148" width="85" height="8" rx="3" fill="rgba(255,255,255,0.1)"/>
+            <!-- KPI cards -->
+            <rect x="172" y="58" width="148" height="64" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <rect x="186" y="70" width="60" height="8" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <rect x="186" y="88" width="80" height="20" rx="4" fill="rgba(255,255,255,0.35)"/>
+            <rect x="330" y="58" width="148" height="64" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <rect x="344" y="70" width="60" height="8" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <rect x="344" y="88" width="80" height="20" rx="4" fill="rgba(255,255,255,0.3)"/>
+            <rect x="488" y="58" width="148" height="64" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <rect x="502" y="70" width="60" height="8" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <rect x="502" y="88" width="70" height="20" rx="4" fill="rgba(255,255,255,0.28)"/>
+            <!-- IA badge -->
+            <rect x="648" y="58" width="132" height="64" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="4,3"/>
+            <rect x="662" y="70" width="40" height="8" rx="3" fill="rgba(255,255,255,0.18)"/>
+            <rect x="662" y="86" width="90" height="12" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <text x="662" y="116" font-size="8" fill="rgba(255,255,255,0.4)" font-family="monospace">✦ IA intégrée</text>
+            <!-- Tableau -->
+            <rect x="172" y="132" width="608" height="74" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <rect x="185" y="144" width="580" height="10" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <rect x="185" y="162" width="580" height="8" rx="3" fill="rgba(255,255,255,0.07)"/>
+            <rect x="185" y="178" width="400" height="8" rx="3" fill="rgba(255,255,255,0.07)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Carte 8 : Click & Vibe — Génération musicale IA ── -->
+    <div class="card-stack__item cs--8">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">IA / Mobile / Creative Tech</span>
+            <h3 class="cs-title">Click &amp; Vibe — Génération musicale par IA</h3>
+            <p class="cs-desc">Application mobile permettant de créer des morceaux de musique à partir d'idées et de paramètres simples. Bibliothèque personnelle, système de crédits et paiement intégrés.</p>
+            <div class="cs-links">
+              <a href="https://clickandvibe.com" class="cs-link cs-link--primary" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                clickandvibe.com
+              </a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React Native"> React Native</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/fastapi/ffffff" alt="FastAPI"> FastAPI</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/sqlite/ffffff" alt="SQLite"> SQLite</span>
+                <span class="cs-tag"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> APIs IA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <!-- Interface musicale schématique -->
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Interface mobile centrée -->
+            <rect x="270" y="10" width="260" height="200" rx="18" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+            <!-- Status bar -->
+            <rect x="290" y="22" width="220" height="10" rx="3" fill="rgba(255,255,255,0.1)"/>
+            <!-- Titre -->
+            <rect x="310" y="42" width="160" height="14" rx="4" fill="rgba(255,255,255,0.3)"/>
+            <!-- Waveform -->
+            <rect x="285" y="68" width="230" height="50" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <polyline points="295,93 315,75 335,88 355,72 375,85 395,78 415,90 435,74 455,86 465,80 475,92 495,76 505,88" stroke="rgba(255,255,255,0.7)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Paramètres style -->
+            <rect x="285" y="128" width="100" height="30" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <rect x="297" y="136" width="60" height="8" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="395" y="128" width="100" height="30" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <rect x="407" y="136" width="60" height="8" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <!-- Bouton génération -->
+            <rect x="310" y="170" width="180" height="28" rx="14" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <rect x="340" y="180" width="120" height="8" rx="3" fill="rgba(255,255,255,0.5)"/>
+            <!-- Crédits -->
+            <text x="400" y="215" font-size="8" fill="rgba(255,255,255,0.3)" font-family="monospace" text-anchor="middle">Crédits · Paiement · Bibliothèque</text>
+            <!-- Gauche : bibliothèque -->
+            <rect x="30" y="30" width="210" height="160" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <rect x="46" y="46" width="80" height="8" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <rect x="46" y="66" width="178" height="22" rx="5" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <rect x="46" y="96" width="178" height="22" rx="5" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <rect x="46" y="126" width="178" height="22" rx="5" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <text x="135" y="202" font-size="8" fill="rgba(255,255,255,0.3)" font-family="monospace" text-anchor="middle">Bibliothèque</text>
+            <!-- Droite : crédits -->
+            <rect x="560" y="30" width="210" height="100" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <rect x="576" y="46" width="70" height="8" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <rect x="576" y="64" width="120" height="30" rx="5" fill="rgba(255,255,255,0.1)"/>
+            <rect x="576" y="104" width="178" height="14" rx="4" fill="rgba(255,255,255,0.08)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Carte 9 : Smart Retail Lab — Vision par ordinateur ── -->
+    <div class="card-stack__item cs--9">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">IA / Computer Vision</span>
+            <h3 class="cs-title">Smart Retail Lab — Vision par ordinateur</h3>
+            <p class="cs-desc">Système intelligent de détection et de suivi des produits en environnement commercial. Pipeline complet : caméra → détection YOLOv8 → suivi → interface opérateur temps réel.</p>
+            <div class="cs-links">
+              <a href="#contact" class="cs-link cs-link--primary">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                En savoir plus
+              </a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python"> Python</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/opencv/ffffff" alt="OpenCV"> OpenCV</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/fastapi/ffffff" alt="FastAPI"> FastAPI</span>
+                <span class="cs-tag"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="3"/><circle cx="8.5" cy="8.5" r="2.5"/><polyline points="21 15 16 10 5 21"/></svg> YOLOv8</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <!-- Vision par ordinateur schématique -->
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Flux caméra -->
+            <rect x="20" y="20" width="320" height="180" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+            <text x="35" y="38" font-size="8" fill="rgba(255,255,255,0.4)" font-family="monospace">CAMERA FEED · LIVE</text>
+            <!-- Produits détectés avec bounding boxes -->
+            <rect x="50" y="50" width="80" height="90" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+            <text x="54" y="48" font-size="7" fill="rgba(255,255,255,0.7)" font-family="monospace">Produit #1</text>
+            <rect x="155" y="65" width="70" height="75" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.35)" stroke-width="1.5"/>
+            <text x="159" y="63" font-size="7" fill="rgba(255,255,255,0.6)" font-family="monospace">Produit #2</text>
+            <rect x="245" y="55" width="75" height="85" rx="4" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" stroke-dasharray="4,2"/>
+            <text x="249" y="53" font-size="7" fill="rgba(255,255,255,0.5)" font-family="monospace">Suivi...</text>
+            <!-- Confiance scores -->
+            <rect x="50" y="148" width="50" height="12" rx="3" fill="rgba(255,255,255,0.15)"/>
+            <text x="54" y="158" font-size="7" fill="rgba(255,255,255,0.8)" font-family="monospace">97.3%</text>
+            <rect x="155" y="148" width="50" height="12" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <text x="159" y="158" font-size="7" fill="rgba(255,255,255,0.7)" font-family="monospace">91.8%</text>
+            <!-- Flèche pipeline -->
+            <line x1="345" y1="110" x2="395" y2="110" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+            <polyline points="385,104 395,110 385,116" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" fill="none"/>
+            <text x="355" y="104" font-size="7" fill="rgba(255,255,255,0.3)" font-family="monospace">YOLOv8</text>
+            <!-- Interface opérateur -->
+            <rect x="400" y="20" width="380" height="180" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <text x="415" y="38" font-size="8" fill="rgba(255,255,255,0.4)" font-family="monospace">INTERFACE OPÉRATEUR</text>
+            <!-- Stats produits -->
+            <rect x="416" y="48" width="100" height="44" rx="5" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <rect x="428" y="58" width="60" height="8" rx="2" fill="rgba(255,255,255,0.2)"/>
+            <rect x="428" y="74" width="40" height="14" rx="3" fill="rgba(255,255,255,0.35)"/>
+            <rect x="526" y="48" width="100" height="44" rx="5" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <rect x="538" y="58" width="60" height="8" rx="2" fill="rgba(255,255,255,0.2)"/>
+            <rect x="538" y="74" width="50" height="14" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <rect x="636" y="48" width="128" height="44" rx="5" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <rect x="648" y="58" width="60" height="8" rx="2" fill="rgba(255,255,255,0.2)"/>
+            <rect x="648" y="74" width="50" height="14" rx="3" fill="rgba(255,255,255,0.28)"/>
+            <!-- Tableau événements -->
+            <rect x="416" y="104" width="348" height="84" rx="5" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+            <rect x="428" y="116" width="320" height="8" rx="2" fill="rgba(255,255,255,0.12)"/>
+            <rect x="428" y="132" width="320" height="8" rx="2" fill="rgba(255,255,255,0.07)"/>
+            <rect x="428" y="148" width="240" height="8" rx="2" fill="rgba(255,255,255,0.07)"/>
+            <rect x="428" y="164" width="280" height="8" rx="2" fill="rgba(255,255,255,0.07)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Carte 10 : SIAB — Salon de l'Immobilier Africain de Bruxelles ── -->
+    <div class="card-stack__item cs--10">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">Événementiel / Web</span>
+            <h3 class="cs-title">SIAB — Salon de l'Immobilier Africain de Bruxelles</h3>
+            <p class="cs-desc">Site événementiel complet pour le Salon de l'Immobilier Africain de Bruxelles : programme, intervenants, inscription, représentants par pays et informations pratiques.</p>
+            <div class="cs-links">
+              <a href="https://siab.events" class="cs-link cs-link--primary" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                siab.events
+              </a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python"> Python</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/django/ffffff" alt="Django"> Django</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/bootstrap/ffffff" alt="Bootstrap"> Bootstrap</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/postgresql/ffffff" alt="PostgreSQL"> PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <!-- Site événementiel schématique -->
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Navbar -->
+            <rect x="20" y="14" width="760" height="36" rx="6" fill="rgba(255,255,255,0.07)"/>
+            <rect x="36" y="22" width="100" height="20" rx="4" fill="rgba(255,255,255,0.25)"/>
+            <rect x="480" y="26" width="60" height="12" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <rect x="556" y="26" width="60" height="12" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <rect x="632" y="22" width="80" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
+            <!-- Hero banner -->
+            <rect x="20" y="60" width="760" height="70" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <rect x="200" y="74" width="400" height="18" rx="5" fill="rgba(255,255,255,0.35)"/>
+            <rect x="280" y="100" width="240" height="12" rx="3" fill="rgba(255,255,255,0.2)"/>
+            <!-- 4 piliers -->
+            <rect x="20" y="144" width="174" height="62" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <rect x="36" y="158" width="80" height="8" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <rect x="36" y="174" width="120" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+            <rect x="36" y="186" width="100" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+            <rect x="206" y="144" width="174" height="62" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <rect x="222" y="158" width="80" height="8" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="222" y="174" width="120" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <rect x="222" y="186" width="90" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
+            <rect x="392" y="144" width="174" height="62" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <rect x="408" y="158" width="80" height="8" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="408" y="174" width="110" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <rect x="578" y="144" width="202" height="62" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <rect x="594" y="158" width="80" height="8" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="594" y="174" width="130" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <!-- Indicateur de pays -->
+            <text x="42" y="156" font-size="7" fill="rgba(255,255,255,0.4)" font-family="monospace">📍 Programme</text>
+            <text x="228" y="156" font-size="7" fill="rgba(255,255,255,0.4)" font-family="monospace">👥 Intervenants</text>
+            <text x="414" y="156" font-size="7" fill="rgba(255,255,255,0.4)" font-family="monospace">🌍 Représentants</text>
+            <text x="600" y="156" font-size="7" fill="rgba(255,255,255,0.4)" font-family="monospace">🎟️ Inscription</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Carte 11 : Lift and Light — Solutions Électriques & Ascenseurs ── -->
+    <div class="card-stack__item cs--11">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">Site Vitrine / Services</span>
+            <h3 class="cs-title">Lift &amp; Light — Solutions Électriques &amp; Ascenseurs</h3>
+            <p class="cs-desc">Site vitrine complet pour une société spécialisée en ascenseurs, climatisation, électricité et groupes électrogènes. Interface moderne avec vidéo hero, catalogue de services et formulaire de contact.</p>
+            <div class="cs-links">
+              <a href="https://www.liftandlight.com" class="cs-link cs-link--primary" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                liftandlight.com
+              </a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/python/ffffff" alt="Python"> Python</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/django/ffffff" alt="Django"> Django</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/bootstrap/ffffff" alt="Bootstrap"> Bootstrap</span>
+                <span class="cs-tag"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Service 24h/7j</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <!-- Site vitrine services schématique -->
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Navbar -->
+            <rect x="20" y="14" width="760" height="36" rx="6" fill="rgba(255,255,255,0.07)"/>
+            <rect x="36" y="22" width="110" height="20" rx="4" fill="rgba(255,255,255,0.22)"/>
+            <rect x="460" y="26" width="55" height="12" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <rect x="528" y="26" width="55" height="12" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <rect x="596" y="26" width="55" height="12" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <rect x="664" y="22" width="80" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
+            <!-- Hero vidéo -->
+            <rect x="20" y="60" width="760" height="76" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+            <!-- Icône play vidéo -->
+            <circle cx="400" cy="98" r="18" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <polygon points="395,90 410,98 395,106" fill="rgba(255,255,255,0.5)"/>
+            <rect x="190" y="106" width="420" height="14" rx="4" fill="rgba(255,255,255,0.0)"/>
+            <text x="400" y="126" font-size="10" fill="rgba(255,255,255,0.35)" font-family="monospace" text-anchor="middle">Solutions Électriques &amp; Ascenseurs · Service 24h/7j</text>
+            <!-- 4 services cards -->
+            <rect x="20" y="148" width="174" height="58" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <rect x="36" y="162" width="80" height="8" rx="3" fill="rgba(255,255,255,0.3)"/>
+            <rect x="36" y="178" width="120" height="6" rx="3" fill="rgba(255,255,255,0.15)"/>
+            <text x="36" y="160" font-size="7" fill="rgba(255,255,255,0.4)" font-family="monospace">🛗 Ascenseurs</text>
+            <rect x="206" y="148" width="174" height="58" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <text x="222" y="160" font-size="7" fill="rgba(255,255,255,0.4)" font-family="monospace">❄️ Climatisation</text>
+            <rect x="222" y="162" width="80" height="8" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="222" y="178" width="110" height="6" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <rect x="392" y="148" width="174" height="58" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <text x="408" y="160" font-size="7" fill="rgba(255,255,255,0.4)" font-family="monospace">⚡ Électricité</text>
+            <rect x="408" y="162" width="80" height="8" rx="3" fill="rgba(255,255,255,0.25)"/>
+            <rect x="578" y="148" width="202" height="58" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <text x="594" y="160" font-size="7" fill="rgba(255,255,255,0.4)" font-family="monospace">🔋 Groupes Électrogènes</text>
+            <rect x="594" y="162" width="120" height="8" rx="3" fill="rgba(255,255,255,0.25)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Carte 12 : Forest Apothecary — Patrimoine Médicinal Africain ── -->
+    <div class="card-stack__item cs--12">
+      <div class="card-stack__item-inner">
+        <div class="card-stack__item-top">
+          <div class="cs-left">
+            <span class="cs-badge">IA / Ethnobotanique / Web</span>
+            <h3 class="cs-title">Forest Apothecary — Patrimoine Médicinal Africain</h3>
+            <p class="cs-desc">Plateforme innovante dédiée à la valorisation de la pharmacopée africaine : diagnostic visuel par IA pour identifier instantanément les plantes médicinales et catalogue de remèdes ancestraux certifiés.</p>
+            <div class="cs-links">
+              <a href="https://apocathery.vercel.app" class="cs-link cs-link--primary" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                apocathery.vercel.app
+              </a>
+              <a href="https://github.com/Rems-21/apocathery" class="cs-link" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                Rems-21/apocathery
+              </a>
+            </div>
+          </div>
+          <div class="cs-right">
+            <div class="cs-stack-wrap">
+              <p class="cs-stack-label">Stack technique</p>
+              <div class="cs-stack">
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/react/ffffff" alt="React"> React 19</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/tailwindcss/ffffff" alt="Tailwind"> Tailwind CSS</span>
+                <span class="cs-tag"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3m0 14v3M2 12h3m14 0h3"/></svg> Diagnostic IA</span>
+                <span class="cs-tag"><img src="https://cdn.simpleicons.org/vercel/ffffff" alt="Vercel"> Vercel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-stack__item-bottom cs-preview">
+          <!-- Interface Ethnobotanique & Diagnostic IA schématique -->
+          <svg viewBox="0 0 800 220" fill="none" xmlns="http://www.w3.org/2000/svg" class="cs-preview-svg">
+            <!-- Navbar -->
+            <rect x="20" y="14" width="760" height="36" rx="6" fill="rgba(255,255,255,0.07)"/>
+            <rect x="36" y="22" width="130" height="20" rx="4" fill="rgba(255,255,255,0.25)"/>
+            <rect x="470" y="26" width="65" height="12" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <rect x="550" y="26" width="65" height="12" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <rect x="630" y="22" width="120" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
+            <!-- Scanner IA Visuel (Gauche) -->
+            <rect x="20" y="58" width="310" height="148" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <!-- Viseur caméra réticule -->
+            <rect x="45" y="76" width="100" height="96" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="4 4"/>
+            <!-- Feuille stylisée -->
+            <path d="M95 102 C115 88, 125 105, 125 125 C105 125, 88 115, 95 102 Z" fill="rgba(255,255,255,0.3)"/>
+            <path d="M95 102 L125 125" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+            <!-- Réticules de scan -->
+            <circle cx="95" cy="124" r="4" fill="#ffffff" opacity="0.8"/>
+            <!-- Résultat IA -->
+            <rect x="160" y="80" width="150" height="16" rx="4" fill="rgba(255,255,255,0.22)"/>
+            <text x="164" y="92" font-size="9" fill="rgba(255,255,255,0.9)" font-family="monospace">🌿 Moringa Oleifera</text>
+            <rect x="160" y="104" width="110" height="12" rx="3" fill="rgba(255,255,255,0.12)"/>
+            <text x="164" y="113" font-size="8" fill="rgba(255,255,255,0.7)" font-family="monospace">Confiance : 98.4%</text>
+            <rect x="160" y="124" width="140" height="8" rx="2" fill="rgba(255,255,255,0.08)"/>
+            <rect x="160" y="136" width="120" height="8" rx="2" fill="rgba(255,255,255,0.08)"/>
+            <rect x="160" y="152" width="90" height="18" rx="9" fill="rgba(255,255,255,0.18)"/>
+            <text x="172" y="164" font-size="7.5" fill="#ffffff" font-family="monospace">Fiche remède →</text>
+            <!-- 2 Fiches de remèdes pharmacopée (Droite) -->
+            <rect x="345" y="58" width="210" height="148" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <text x="360" y="78" font-size="9" fill="rgba(255,255,255,0.85)" font-family="monospace">🏺 Infusion Détox</text>
+            <rect x="360" y="88" width="180" height="8" rx="2" fill="rgba(255,255,255,0.15)"/>
+            <rect x="360" y="102" width="160" height="6" rx="2" fill="rgba(255,255,255,0.08)"/>
+            <rect x="360" y="114" width="140" height="6" rx="2" fill="rgba(255,255,255,0.08)"/>
+            <rect x="360" y="134" width="70" height="14" rx="4" fill="rgba(255,255,255,0.12)"/>
+            <rect x="436" y="134" width="60" height="14" rx="4" fill="rgba(255,255,255,0.12)"/>
+            <rect x="360" y="158" width="180" height="32" rx="6" fill="rgba(255,255,255,0.06)"/>
+            <text x="372" y="178" font-size="8" fill="rgba(255,255,255,0.6)" font-family="monospace">Posologie certifiée</text>
+            <rect x="570" y="58" width="210" height="148" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+            <text x="585" y="78" font-size="9" fill="rgba(255,255,255,0.85)" font-family="monospace">🌱 Huile de Neem</text>
+            <rect x="585" y="88" width="180" height="8" rx="2" fill="rgba(255,255,255,0.15)"/>
+            <rect x="585" y="102" width="150" height="6" rx="2" fill="rgba(255,255,255,0.08)"/>
+            <rect x="585" y="114" width="130" height="6" rx="2" fill="rgba(255,255,255,0.08)"/>
+            <rect x="585" y="134" width="75" height="14" rx="4" fill="rgba(255,255,255,0.12)"/>
+            <rect x="666" y="134" width="65" height="14" rx="4" fill="rgba(255,255,255,0.12)"/>
+            <rect x="585" y="158" width="180" height="32" rx="6" fill="rgba(255,255,255,0.06)"/>
+            <text x="597" y="178" font-size="8" fill="rgba(255,255,255,0.6)" font-family="monospace">Ethnobotanique</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /.card-stack -->
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TÉMOIGNAGES — Défilant (Infinite Marquee)
+═══════════════════════════════════════════════════════════════ -->
+<section id="temoignages" class="testimonials-section">
+  <!-- Lueurs d'ambiance monochromes -->
+  <div class="testi-glow testi-glow-1" aria-hidden="true"></div>
+  <div class="testi-glow testi-glow-2" aria-hidden="true"></div>
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-pill">Retours &amp; Confiance</span>
+      <h2 class="sec-title">Retours d'expérience concrets</h2>
+      <p class="sec-desc">Clients, entrepreneurs et apprenants partagent leur expérience sur nos développements web, outils SaaS, systèmes IoT et formations.</p>
+    </div>
+  </div>
+
+  <div class="marquee-wrapper">
+    <!-- ── Ligne Unique : Défilement fluide continu ── -->
+    <div class="marquee-row">
+      <div class="marquee-track track-left">
+
+        <!-- Témoignage 1 : XENFY -->
+        <div class="testimonial-card">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">SaaS de gestion · XENFY</span>
+          </div>
+          <p class="t-quote">« XENFY a simplifié la gestion de nos ventes, de nos stocks et des dettes clients au quotidien. La plateforme est rapide, intuitive et Remus a été extrêmement réactif sur nos retours d'utilisation. »</p>
+          <div class="t-author">
+            <div class="t-avatar">PN</div>
+            <div class="t-meta">
+              <div class="t-name">Patrice Nguekam <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Gérant de commerce · Douala</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Témoignage 2 : Lift & Light -->
+        <div class="testimonial-card">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">Site Web &amp; Services</span>
+          </div>
+          <p class="t-quote">« Notre site web valorise impeccablement nos activités d'ascenseurs, climatisation et groupes électrogènes. L'interface moderne rassure nos clients et facilite les prises de contact d'urgence 24h/7j. »</p>
+          <div class="t-author">
+            <div class="t-avatar">LL</div>
+            <div class="t-meta">
+              <div class="t-name">Équipe Lift &amp; Light <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Direction Opérationnelle · liftandlight.com</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Témoignage 3 : Formation & Mentorat -->
+        <div class="testimonial-card">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">Formation &amp; Pédagogie</span>
+          </div>
+          <p class="t-quote">« Un formateur très patient et orienté pratique. Remus m'a fait progresser pas à pas sur Python, la création d'APIs et la logique web sans jargon inutile. Chaque notion était directement mise en application. »</p>
+          <div class="t-author">
+            <div class="t-avatar">KB</div>
+            <div class="t-meta">
+              <div class="t-name">Kévin B. <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Apprenant en reconversion numérique</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Témoignage 4 : SIAB Event -->
+        <div class="testimonial-card">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">Plateforme Événementielle</span>
+          </div>
+          <p class="t-quote">« Le site du Salon de l'Immobilier Africain de Bruxelles a géré l'ensemble des inscriptions visiteurs et des fiches exposants avec une parfaite stabilité. Travail rigoureux, propre et livré dans les délais. »</p>
+          <div class="t-author">
+            <div class="t-avatar">SB</div>
+            <div class="t-meta">
+              <div class="t-name">Comité SIAB <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Organisation Salon Immobilier · Bruxelles</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Témoignage 5 : IoT & Capteurs -->
+        <div class="testimonial-card">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">Systèmes Connectés &amp; IoT</span>
+          </div>
+          <p class="t-quote">« Remus a mis en place notre dispositif de collecte de données de capteurs via MQTT avec une interface web de supervision très claire. Un développeur qui comprend le matériel aussi bien que le web. »</p>
+          <div class="t-author">
+            <div class="t-avatar">SE</div>
+            <div class="t-meta">
+              <div class="t-name">Samuel E. <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Responsable Technique &amp; Maintenance</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Témoignage 6 : Développement & Télétravail -->
+        <div class="testimonial-card">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">Fullstack &amp; Télétravail</span>
+          </div>
+          <p class="t-quote">« Collaboration fluide à distance, respect strict des engagements et communication transparente à chaque étape. Remus transforme les besoins complexes en solutions logicielles simples et robustes. »</p>
+          <div class="t-author">
+            <div class="t-avatar">AM</div>
+            <div class="t-meta">
+              <div class="t-name">Aïcha M. <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Cheffe de Projets Digitaux</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── CLONE POUR BOUCLE INFINIE TRANSPARENTE ── -->
+        <div class="testimonial-card" aria-hidden="true">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">SaaS de gestion · XENFY</span>
+          </div>
+          <p class="t-quote">« XENFY a simplifié la gestion de nos ventes, de nos stocks et des dettes clients au quotidien. La plateforme est rapide, intuitive et Remus a été extrêmement réactif sur nos retours d'utilisation. »</p>
+          <div class="t-author">
+            <div class="t-avatar">PN</div>
+            <div class="t-meta">
+              <div class="t-name">Patrice Nguekam <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Gérant de commerce · Douala</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" aria-hidden="true">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">Site Web &amp; Services</span>
+          </div>
+          <p class="t-quote">« Notre site web valorise impeccablement nos activités d'ascenseurs, climatisation et groupes électrogènes. L'interface moderne rassure nos clients et facilite les prises de contact d'urgence 24h/7j. »</p>
+          <div class="t-author">
+            <div class="t-avatar">LL</div>
+            <div class="t-meta">
+              <div class="t-name">Équipe Lift &amp; Light <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Direction Opérationnelle · liftandlight.com</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" aria-hidden="true">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">Formation &amp; Pédagogie</span>
+          </div>
+          <p class="t-quote">« Un formateur très patient et orienté pratique. Remus m'a fait progresser pas à pas sur Python, la création d'APIs et la logique web sans jargon inutile. Chaque notion était directement mise en application. »</p>
+          <div class="t-author">
+            <div class="t-avatar">KB</div>
+            <div class="t-meta">
+              <div class="t-name">Kévin B. <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Apprenant en reconversion numérique</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" aria-hidden="true">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">Plateforme Événementielle</span>
+          </div>
+          <p class="t-quote">« Le site du Salon de l'Immobilier Africain de Bruxelles a géré l'ensemble des inscriptions visiteurs et des fiches exposants avec une parfaite stabilité. Travail rigoureux, propre et livré dans les délais. »</p>
+          <div class="t-author">
+            <div class="t-avatar">SB</div>
+            <div class="t-meta">
+              <div class="t-name">Comité SIAB <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Organisation Salon Immobilier · Bruxelles</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" aria-hidden="true">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">Systèmes Connectés &amp; IoT</span>
+          </div>
+          <p class="t-quote">« Remus a mis en place notre dispositif de collecte de données de capteurs via MQTT avec une interface web de supervision très claire. Un développeur qui comprend le matériel aussi bien que le web. »</p>
+          <div class="t-author">
+            <div class="t-avatar">SE</div>
+            <div class="t-meta">
+              <div class="t-name">Samuel E. <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Responsable Technique &amp; Maintenance</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" aria-hidden="true">
+          <div class="t-header">
+            <div class="t-stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="t-tag">Fullstack &amp; Télétravail</span>
+          </div>
+          <p class="t-quote">« Collaboration fluide à distance, respect strict des engagements et communication transparente à chaque étape. Remus transforme les besoins complexes en solutions logicielles simples et robustes. »</p>
+          <div class="t-author">
+            <div class="t-avatar">AM</div>
+            <div class="t-meta">
+              <div class="t-name">Aïcha M. <svg class="t-verified" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div class="t-role">Cheffe de Projets Digitaux</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CALL TO ACTION — BANNER DR REMUS
+═══════════════════════════════════════════════════════════════ -->
+<section id="cta" class="cta-section">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-visual">
+        <img src="remus-cta.jpg" alt="Dr Remus - Technicien en Automatisme &amp; Développeur Full-Stack" class="cta-img" loading="lazy">
+        <div class="cta-visual-fade" aria-hidden="true"></div>
+      </div>
+      <div class="cta-content">
+        <div class="cta-pill">
+          <span class="cta-pill-icon">⚡</span> Prêt à concrétiser votre vision ?
+        </div>
+        <h2 class="cta-title">Donnons vie à vos projets les plus ambitieux</h2>
+        <p class="cta-desc">
+          Du développement d’applications web &amp; SaaS modernes à la mise en place d'architectures industrielles IoT et d'automates connectés. Concevons ensemble une solution performante, robuste et sur mesure.
+        </p>
+        <div class="cta-actions">
+          <a href="https://wa.me/237693290135" target="_blank" rel="noopener" class="btn-cta-primary" aria-label="Discuter directement sur WhatsApp">
+            <span>Discuter sur WhatsApp</span>
+            <div class="btn-cta-circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+          </a>
+          <a href="#contact" class="btn-cta-secondary">
+            <span>Remplir le formulaire</span>
+          </a>
+        </div>
+        <div class="cta-guarantees">
+          <span class="cta-guarantee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Réponse garantie sous 24 h</span>
+          <span class="cta-guarantee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Mobilité &amp; Télétravail</span>
+          <span class="cta-guarantee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Accompagnement de A à Z</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════════════════════════════ -->
+<section id="contact">
+
+  <!-- ── Décors de fond CONTACT : grille isométrique ── -->
+  <div class="sec-deco" aria-hidden="true">
+    <div class="sec-separator top"></div>
+
+    <!-- Grille isométrique gauche -->
+    <svg class="deco-iso" viewBox="0 0 340 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#ffffff" stroke-width=".9" opacity=".7">
+        <!-- Losanges isométriques -->
+        <polygon points="100,20 160,52 160,116 100,148 40,116 40,52"/>
+        <polygon points="160,52 220,84 220,148 160,180 100,148 100,84"/>
+        <polygon points="40,116 100,148 100,212 40,244 -20,212 -20,148"/>
+        <polygon points="100,148 160,180 160,244 100,276 40,244 40,180"/>
+        <polygon points="160,180 220,212 220,276 160,308 100,276 100,212"/>
+        <polygon points="40,244 100,276 100,340 40,372 -20,340 -20,276"/>
+        <polygon points="100,276 160,308 160,372 100,404 40,372 40,308"/>
+        <polygon points="160,308 220,340 220,404 160,436 100,404 100,340"/>
+        <polygon points="40,372 100,404 100,468 40,500 -20,468 -20,404"/>
+        <polygon points="100,404 160,436 160,500 100,532 40,500 40,436"/>
+      </g>
+    </svg>
+
+    <!-- Grille isométrique droite -->
+    <svg class="deco-iso-r" viewBox="0 0 280 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#ffffff" stroke-width=".9" opacity=".6">
+        <polygon points="80,20 140,52 140,116 80,148 20,116 20,52"/>
+        <polygon points="140,52 200,84 200,148 140,180 80,148 80,84"/>
+        <polygon points="20,116 80,148 80,212 20,244 -40,212 -40,148"/>
+        <polygon points="80,148 140,180 140,244 80,276 20,244 20,180"/>
+        <polygon points="140,180 200,212 200,276 140,308 80,276 80,212"/>
+        <polygon points="20,244 80,276 80,340 20,372 -40,340 -40,276"/>
+        <polygon points="80,276 140,308 140,372 80,404 20,372 20,308"/>
+        <polygon points="140,308 200,340 200,404 140,436 80,404 80,340"/>
+      </g>
+    </svg>
+
+    <div class="sec-separator bottom"></div>
+  </div>
+
+  <div class="container">
+    <div class="sec-header">
+      <span class="sec-pill">Contact</span>
+      <h2 class="sec-title">Parlons de votre projet</h2>
+      <p class="sec-desc">Développement web, outil SaaS, formation ou projet IoT ? Échangeons dès maintenant.</p>
+    </div>
+    <div class="contact-grid">
+
+      <div class="contact-info g-card">
+        <h3>Restons en contact</h3>
+        <p>Disponible pour des projets de développement sur mesure, des outils SaaS, des systèmes connectés IoT, ou des sessions de formation et mentorat.</p>
+
+        <!-- Bouton WhatsApp Mis en avant -->
+        <a href="https://wa.me/237693290135" target="_blank" rel="noopener" class="btn-whatsapp-highlight" aria-label="Discuter directement sur WhatsApp">
+          <div class="wa-btn-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.275-.101-.476-.15-.677.15-.2.299-.776.978-.952 1.178-.175.199-.35.225-.651.075-.3-.15-1.271-.468-2.42-1.493-.895-.798-1.5-1.784-1.676-2.084-.175-.3-.019-.462.132-.611.135-.134.3-.35.45-.525.15-.175.2-.299.3-.499.1-.2.05-.374-.025-.524-.075-.15-.677-1.632-.927-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.525.075-.8.374s-1.052 1.028-1.052 2.508 1.077 2.908 1.228 3.107c.15.2 2.12 3.237 5.137 4.54.717.31 1.277.495 1.713.633.72.228 1.376.196 1.894.119.577-.086 1.78-.728 2.03-1.432.251-.705.251-1.308.176-1.433-.075-.125-.276-.2-.577-.35zM12.042 21.84c-1.77 0-3.504-.476-5.025-1.378l-.36-.213-3.733.979.996-3.64-.235-.374A9.79 9.79 0 0 1 2.25 12.05C2.25 6.649 6.64 2.25 12.042 2.25c2.614 0 5.072 1.018 6.92 2.866a9.73 9.73 0 0 1 2.871 6.924c0 5.401-4.39 9.8-9.791 9.8zM12.042 0C5.402 0 .01 5.392.01 12.031c0 2.12.553 4.188 1.603 6.009L0 24l6.136-1.61a12.007 12.007 0 0 0 5.906 1.542h.005c6.64 0 12.031-5.392 12.031-12.031A12.03 12.03 0 0 0 12.042 0z"/></svg>
+          </div>
+          <div class="wa-btn-content">
+            <span class="wa-btn-tag">Échange Rapide &amp; Direct</span>
+            <span class="wa-btn-num">WhatsApp : +237 693 29 01 35</span>
+          </div>
+          <span class="wa-btn-arrow">➔</span>
+        </a>
+
+        <div class="channels">
+          <a href="mailto:dsonkouatremus@gmail.com" class="channel">
+            <div class="ch-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="ch-lbl">Email direct</div><div class="ch-val">dsonkouatremus@gmail.com</div></div>
+          </a>
+          <a href="https://github.com/Rems-21" target="_blank" rel="noopener" class="channel">
+            <div class="ch-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+            <div><div class="ch-lbl">GitHub</div><div class="ch-val">github.com/Rems-21</div></div>
+          </a>
+          <div class="channel" style="cursor:default;">
+            <div class="ch-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="ch-lbl">Localisation &amp; Disponibilité</div><div class="ch-val">Douala, Cameroun · Mobilité &amp; Télétravail</div></div>
+          </div>
+        </div>
+
+        <div class="contact-response-pill">
+          <span>⚡</span> Réponse habituelle sous 24 h
+        </div>
+      </div>
+
+      <div class="contact-form-wrap g-card">
+        <form id="contactForm" novalidate>
+          <!-- Honeypot anti-robot invisible -->
+          <input type="text" name="website_hp" id="website_hp" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="lbl" for="cName">Nom ou entreprise *</label>
+              <input class="inp" id="cName" name="name" type="text" placeholder="Votre nom ou entreprise" required>
+            </div>
+            <div class="form-group">
+              <label class="lbl" for="cEmail">Email *</label>
+              <input class="inp" id="cEmail" name="email" type="email" placeholder="votre.email@domaine.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="lbl" for="cWhatsapp">Numéro WhatsApp</label>
+              <input class="inp" id="cWhatsapp" name="whatsapp" type="tel" placeholder="+237 693 29 01 35 ou avec indicatif pays">
+            </div>
+            <div class="form-group">
+              <label class="lbl" for="cType">Nature du projet</label>
+              <select class="sel" id="cType" name="type">
+                <option>Formations ou Accompagnement</option>
+                <option>Développement Web Fullstack &amp; SaaS</option>
+                <option>Informatique Industrielle &amp; IoT</option>
+                <option>Autre demande / Collaboration</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="lbl" for="cMsg">Message *</label>
+            <textarea class="txa" id="cMsg" name="message" placeholder="Décrivez succinctement votre besoin, vos objectifs ou votre projet de formation…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%; padding:14px 20px;">
+            Envoyer le message 
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div id="formNote" class="form-note"></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ══════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <!-- Monumental Architectural Branding -->
+  <div class="footer-monumental-wrap" aria-hidden="true">
+    <div class="footer-monumental-text">DR REMUS</div>
+  </div>
+
+  <div class="container foot-inner">
+    <p class="foot-copy">© 2026 <strong>Dr Remus</strong> · Technicien en Automatisme &amp; Développeur Full-Stack</p>
+    <button class="btt" id="btt" aria-label="Retour en haut de page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+  </div>
+</footer>
+
+<!-- ═══ BOUTON FLOTTANT WHATSAPP ═════════════════════════════════ -->
+<a href="https://wa.me/237693290135" class="wa-float-btn" target="_blank" rel="noopener" aria-label="Contacter Dr Remus sur WhatsApp">
+  <span class="wa-float-pulse" aria-hidden="true"></span>
+  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
+    <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.275-.101-.476-.15-.677.15-.2.299-.776.978-.952 1.178-.175.199-.35.225-.651.075-.3-.15-1.271-.468-2.42-1.493-.895-.798-1.5-1.784-1.676-2.084-.175-.3-.019-.462.132-.611.135-.134.3-.35.45-.525.15-.175.2-.299.3-.499.1-.2.05-.374-.025-.524-.075-.15-.677-1.632-.927-2.235-.244-.587-.492-.507-.677-.516l-.577-.01c-.2 0-.525.075-.8.374s-1.052 1.028-1.052 2.508 1.077 2.908 1.228 3.107c.15.2 2.12 3.237 5.137 4.54.717.31 1.277.495 1.713.633.72.228 1.376.196 1.894.119.577-.086 1.78-.728 2.03-1.432.251-.705.251-1.308.176-1.433-.075-.125-.276-.2-.577-.35zM12.042 21.84c-1.77 0-3.504-.476-5.025-1.378l-.36-.213-3.733.979.996-3.64-.235-.374A9.79 9.79 0 0 1 2.25 12.05C2.25 6.649 6.64 2.25 12.042 2.25c2.614 0 5.072 1.018 6.92 2.866a9.73 9.73 0 0 1 2.871 6.924c0 5.401-4.39 9.8-9.791 9.8zM12.042 0C5.402 0 .01 5.392.01 12.031c0 2.12.553 4.188 1.603 6.009L0 24l6.136-1.61a12.007 12.007 0 0 0 5.906 1.542h.005c6.64 0 12.031-5.392 12.031-12.031A12.03 12.03 0 0 0 12.042 0z"/>
+  </svg>
+  <span class="wa-float-txt">WhatsApp</span>
+</a>
+
+<!-- ═══ MODAL POPUP SUCCÈS CONTACT (HAUTE VISIBILITÉ) ════════════ -->
+<div id="contactSuccessModal" class="c-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cModalTitle">
+  <div class="c-modal-overlay" id="cModalOverlay"></div>
+  <div class="c-modal-card">
+    <button type="button" class="c-modal-close" id="cModalClose" aria-label="Fermer la boîte de dialogue">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    
+    <div class="c-modal-icon-wrap">
+      <div class="c-modal-icon-pulse" aria-hidden="true"></div>
+      <div class="c-modal-icon">
+        <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="c-modal-pill">TRANSMISSION RÉUSSIE</div>
+    <h3 class="c-modal-title" id="cModalTitle">Message envoyé avec succès !</h3>
+    
+    <p class="c-modal-desc" id="cModalDesc">
+      Merci <strong id="cModalName"></strong>, votre demande a bien été transmise à Dr Remus. Un e-mail d'accusé de réception vous a été envoyé et vous recevrez une réponse personnalisée sous <strong>24 heures</strong>.
+    </p>
+
+    <div class="c-modal-badges">
+      <div class="c-modal-badge">
+        <span>⚡</span> Réponse garantie sous 24 h
+      </div>
+      <div class="c-modal-badge">
+        <span>✉</span> Confirmation envoyée par e-mail
+      </div>
+    </div>
+
+    <div class="c-modal-actions">
+      <button type="button" class="btn btn-primary" id="cModalBtn" style="width:100%; padding:14px 24px; font-size:0.95rem; justify-content:center;">
+        Parfait, compris !
+      </button>
+    </div>
+  </div>
+</div>
+
+  <!-- ═══ TRACKING ANALYTICS VISITEURS (GRAFANA) ═══════════════════ -->
+  <script>
+    (function(){
+      try {
+        var page = 'index.html';
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon('track.php?p=' + encodeURIComponent(page));
+        } else {
+          fetch('track.php?p=' + encodeURIComponent(page), { mode: 'no-cors' });
+        }
+      } catch(e){}
+    })();
+  </script>
+
+</body>
+</html>
