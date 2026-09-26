@@ -990,11 +990,12 @@ $pageTitle = $certificate
         $dateClean = formatFrenchDate($certificate['date_emission']);
         $isRevoked = ($certificate['statut'] === 'revoque');
 
-        // URL complète pour le partage et le QR code
+        // URL complète pour le partage et le QR code (supporte sous-domaine racine ou sous-dossier)
         $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https" : "http";
         $currentHost = $_SERVER['HTTP_HOST'] ?? 'localhost';
-        $fullCertUrl = "{$protocol}://{$currentHost}/portfolio/verify.php?cert=" . urlencode($certificate['cert_id']);
-        $shortCertUrl = "dr-academy.com/verify/" . htmlspecialchars(substr($certificate['cert_id'], -4));
+        $baseDir = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '')), '/');
+        $fullCertUrl = "{$protocol}://{$currentHost}{$baseDir}/verify.php?cert=" . urlencode($certificate['cert_id']);
+        $shortCertUrl = htmlspecialchars($currentHost) . "/verify/" . htmlspecialchars(substr($certificate['cert_id'], -4));
 
         // URL du QR code (service universel haute fidélité)
         $qrCodeApiUrl = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&margin=0&data=" . urlencode($fullCertUrl);
